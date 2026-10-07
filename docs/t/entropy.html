@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>熵 · 人话术语</title>
+<meta name="description" content="数学与 AI 术语的定义、词源，以及评论区里不同背景的人各自的讲法。">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+  <h1><a href="../index.html">人话术语</a></h1>
+  <p>一个词，四种讲法，一群不同背景的人各自说一遍</p>
+</header>
+<article class="term">
+  <header>
+    <h1>熵<span class="en">entropy</span></h1>
+    <div class="badges">
+      <span class="badge both_hard">🔁 两边都不直观，只能记住它指什么</span>
+      <span class="chip">概率与信息</span>
+      
+    </div>
+  </header>
+
+  <section class="field plain">
+    <h2>人话</h2>
+    <p>平均「意外程度」。越难猜的事，结果出来越让人意外，熵越高。抛均匀硬币熵是 1 bit；结果早就确定的事熵是 0。信息论里：给结果编码，平均最少要多少 bit。</p>
+  </section>
+
+  <section class="field"><h2>英文释义</h2><p>en「在里面」+ tropy「转变」= 内在的转变。克劳修斯造词时故意让它长得像 energy。</p></section>
+<section class="field"><h2>英文来源</h2><p>希腊 <em>tropē</em>「转向、转变」。克劳修斯 1865 年用于热力学。</p></section>
+<section class="field"><h2>中文来源</h2><p>1923 年普朗克的学生胡刚复为翻译新造的字：热量 ÷ 温度是一个「商」，加「火」旁表示热学。两边都只能记含义。</p></section>
+
+  <section class="comments">
+    <h2>评论区<span class="count"> · 4 条</span></h2>
+    <div class="comment"><div class="meta"><span class="who">吐槽役</span><span class="chip">非本专业读者</span><span class="src">编者视角</span></div><p class="text">物理课说熵是混乱度，信息论说熵是不确定性，机器学习说熵是 loss。到底是哪个？</p><div class="replies"><div class="comment"><div class="meta"><span class="who">信息论路人</span><span class="chip">信息论</span><span class="src">编者视角</span></div><p class="text">都是同一个东西：「要猜中结果，平均需要问几个是/否问题」。越乱、越不确定，要问的越多。</p></div></div></div><div class="comment"><div class="meta"><span class="who">天气预报员</span><span class="chip">气象</span><span class="src">编者视角</span></div><p class="text">沙漠里预报「明天晴」，没什么信息量，熵低。春天的上海预报「明天晴」，信息量大，熵高。</p></div><div class="comment"><div class="meta"><span class="who">冷知识</span><span class="chip">科普爱好者</span><span class="src">编者视角</span></div><p class="text">香农本来想叫它「信息」或「不确定性」。冯·诺依曼劝他叫「熵」：一是公式和热力学的熵一样，二是「没人真懂熵是什么，辩论时你总占上风」。（这个故事流传很广，出处不完全可靠。）</p></div>
+    <p class="empty">你的理解跟上面哪条不一样？<a href="https://github.com/Snoop2023/plain-terms/edit/main/.github/ISSUE_TEMPLATE/补一条理解.yml">在 GitHub 上补一条</a> —— 背景不同的人各说一遍，下一个人就懂了。</p>
+  </section>
+
+  <section class="field" style="margin-top:2rem">
+    <h2>动手改</h2>
+    <p style="font-size:.92rem;color:var(--muted)">
+      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/probability/entropy.md">编辑这个词条</a> ·
+      <a href="../index.html#概率与信息">看看同一章里的其它词</a>
+    </p>
+  </section>
+</article>
+
+<footer class="site">
+  <p>每一页都欢迎 PR：加词条、改定义、补一条你的理解。</p>
+  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，仅作短引用并注明出处；如有异议请开 Issue，我们会删改。</p>
+</footer>
+</div>
+</body>
+</html>

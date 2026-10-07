@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>交叉熵 · 人话术语</title>
+<meta name="description" content="数学与 AI 术语的定义、词源，以及评论区里不同背景的人各自的讲法。">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+  <h1><a href="../index.html">人话术语</a></h1>
+  <p>一个词，四种讲法，一群不同背景的人各自说一遍</p>
+</header>
+<article class="term">
+  <header>
+    <h1>交叉熵<span class="en">cross-entropy</span></h1>
+    <div class="badges">
+      <span class="badge both_hard">🔁 两边都不直观，只能记住它指什么</span>
+      <span class="chip">概率与信息</span>
+      
+    </div>
+  </header>
+
+  <section class="field plain">
+    <h2>人话</h2>
+    <p>拿「模型猜的概率」去给「真实答案」打分。模型给真实答案的概率越高，交叉熵越低。GPT 训练时压低的那个 loss 就是它；只有一个正确答案时，它就等于「−log(正确答案的概率)」。</p>
+  </section>
+
+  <section class="field"><h2>英文释义</h2><p>cross「交叉」：用一个分布（模型的猜测）去衡量另一个分布（真实数据），两者交叉起来算。</p></section>
+<section class="field"><h2>英文来源</h2><p>信息论，20 世纪中叶。</p></section>
+<section class="field"><h2>中文来源</h2><p>直译。</p></section>
+
+  <section class="comments">
+    <h2>评论区<span class="count"> · 3 条</span></h2>
+    <div class="comment"><div class="meta"><span class="who">炼丹师</span><span class="chip">AI 训练 / 工程</span><span class="src">编者视角</span></div><p class="text">面试时被问交叉熵，说「就是正确答案概率取负对数」，面试官点头。真的就这么简单。</p></div><div class="comment"><div class="meta"><span class="who">考生</span><span class="chip">学生</span><span class="src">编者视角</span></div><p class="text">像考试打分。正确答案你给了 90% 的把握，扣分很少；你只给了 1% 的把握，扣分巨多。0% 的把握？扣到无穷大。</p></div><div class="comment"><div class="meta"><span class="who">数学系路人</span><span class="chip">数学专业</span><span class="src">编者视角</span></div><p class="text">交叉熵 − 熵 = KL 散度，衡量「模型的猜测」离「真实分布」有多远。熵是数据本身的难度，压不下去；能压的只有 KL 那一部分。</p></div>
+    <p class="empty">你的理解跟上面哪条不一样？<a href="https://github.com/Snoop2023/plain-terms/edit/main/.github/ISSUE_TEMPLATE/补一条理解.yml">在 GitHub 上补一条</a> —— 背景不同的人各说一遍，下一个人就懂了。</p>
+  </section>
+
+  <section class="field" style="margin-top:2rem">
+    <h2>动手改</h2>
+    <p style="font-size:.92rem;color:var(--muted)">
+      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/probability/cross-entropy.md">编辑这个词条</a> ·
+      <a href="../index.html#概率与信息">看看同一章里的其它词</a>
+    </p>
+  </section>
+</article>
+
+<footer class="site">
+  <p>每一页都欢迎 PR：加词条、改定义、补一条你的理解。</p>
+  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，仅作短引用并注明出处；如有异议请开 Issue，我们会删改。</p>
+</footer>
+</div>
+</body>
+</html>

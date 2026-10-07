@@ -286,7 +286,7 @@ def build():
                               if t["meta"].get("category") in cfg["categories"] else 99,
                               t["meta"].get("term_zh", "")))
 
-    out_dir = os.path.join(ROOT, "_site")
+    out_dir = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.join(ROOT, "_site")
     if os.path.isdir(out_dir):
         shutil.rmtree(out_dir)
     os.makedirs(os.path.join(out_dir, "t"))

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>嵌入 · 人话术语</title>
+<meta name="description" content="数学与 AI 术语的定义、词源，以及评论区里不同背景的人各自的讲法。">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+  <h1><a href="../index.html">人话术语</a></h1>
+  <p>一个词，四种讲法，一群不同背景的人各自说一遍</p>
+</header>
+<article class="term">
+  <header>
+    <h1>嵌入<span class="en">embedding</span></h1>
+    <div class="badges">
+      <span class="badge misleading">⚠️ 中文有歧义或误导，先看英文</span>
+      <span class="chip">AI 专用词</span>
+      
+    </div>
+  </header>
+
+  <section class="field plain">
+    <h2>人话</h2>
+    <p>给每个 token 配一个向量。做法是拿 token 的 ID 去一张大表里查一行，这张表是训练出来的，意思相近的词，查出来的向量也相近。GPT 拿到文字后做的第一件事就是查这张表。</p>
+  </section>
+
+  <section class="field"><h2>英文释义</h2><p>em「放进」+ bed「床」= embed「嵌进去、安放进去」。数学上指把一个东西放进另一个空间：把离散的词「放进」连续的向量空间。</p></section>
+<section class="field"><h2>英文来源</h2><p>古英语 <em>bedd</em>「床」。</p></section>
+<section class="field"><h2>中文来源</h2><p>直译。⚠️ 和「嵌入式系统 embedded system」是同一个英文词根，意思毫无关系。</p></section>
+
+  <section class="comments">
+    <h2>评论区<span class="count"> · 4 条</span></h2>
+    <div class="comment"><div class="meta"><span class="who">嵌入式老兵</span><span class="chip">嵌入式 / 固件</span><span class="src">编者视角</span></div><p class="text">我以为终于到了我的主场，结果是查表。不过确实就是 <code>const float table[VOCAB][DIM]</code>，用 token ID 当下标取一行。区别只有一个：这张表是训练出来的，不是手写的。</p></div><div class="comment"><div class="meta"><span class="who">吐槽役</span><span class="chip">非本专业读者</span><span class="src">编者视角</span></div><p class="text">为什么不直接用 ID 当输入？</p><div class="replies"><div class="comment"><div class="meta"><span class="who">炼丹师</span><span class="chip">AI 训练 / 工程</span><span class="src">编者视角</span></div><p class="text">ID 只是编号。猫是 3、狗是 4，不代表猫狗比猫和汽车更像。查出来的向量才有「距离」的意义，像的词靠得近。</p></div></div></div><div class="comment"><div class="meta"><span class="who">数学系路人</span><span class="chip">数学专业</span><span class="src">编者视角</span></div><p class="text">经典例子：king − man + woman ≈ queen。向量相减能表示「关系」。</p></div>
+    <p class="empty">你的理解跟上面哪条不一样？<a href="https://github.com/Snoop2023/plain-terms/edit/main/.github/ISSUE_TEMPLATE/补一条理解.yml">在 GitHub 上补一条</a> —— 背景不同的人各说一遍，下一个人就懂了。</p>
+  </section>
+
+  <section class="field" style="margin-top:2rem">
+    <h2>动手改</h2>
+    <p style="font-size:.92rem;color:var(--muted)">
+      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/ai/embedding.md">编辑这个词条</a> ·
+      <a href="../index.html#AI 专用词">看看同一章里的其它词</a>
+    </p>
+  </section>
+</article>
+
+<footer class="site">
+  <p>每一页都欢迎 PR：加词条、改定义、补一条你的理解。</p>
+  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，仅作短引用并注明出处；如有异议请开 Issue，我们会删改。</p>
+</footer>
+</div>
+</body>
+</html>

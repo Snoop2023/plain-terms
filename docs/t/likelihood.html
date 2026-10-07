@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>似然 · 人话术语</title>
+<meta name="description" content="数学与 AI 术语的定义、词源，以及评论区里不同背景的人各自的讲法。">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+  <h1><a href="../index.html">人话术语</a></h1>
+  <p>一个词，四种讲法，一群不同背景的人各自说一遍</p>
+</header>
+<article class="term">
+  <header>
+    <h1>似然<span class="en">likelihood</span></h1>
+    <div class="badges">
+      <span class="badge misleading">⚠️ 中文有歧义或误导，先看英文</span>
+      <span class="chip">概率与信息</span>
+      
+    </div>
+  </header>
+
+  <section class="field plain">
+    <h2>人话</h2>
+    <p>概率和似然是同一个公式，只是问法反过来。概率：参数定了，问「这组数据出现的可能性多大」。似然：数据已经摆在这，问「哪组参数最能解释它」。训练模型 = 找让真实数据似然最大的参数。</p>
+  </section>
+
+  <section class="field"><h2>英文释义</h2><p>likely「可能的」→ likelihood「可能性」。⚠️ 日常英语里 likelihood 和 probability 几乎同义，英文母语者也经常混。</p></section>
+<section class="field"><h2>英文来源</h2><p>古英语 <em>gelīc</em>「相像」。费希尔 1921 年把它和 probability 正式区分开。</p></section>
+<section class="field"><h2>中文来源</h2><p>似 = 像，然 = 这样，「看起来像是这样」。中文反而比英文更准。</p></section>
+
+  <section class="comments">
+    <h2>评论区<span class="count"> · 3 条</span></h2>
+    <div class="comment"><div class="meta"><span class="who">吐槽役</span><span class="chip">非本专业读者</span><span class="src">编者视角</span></div><p class="text">概率和似然，教材花一整页公式区分，我看完还是分不清。</p><div class="replies"><div class="comment"><div class="meta"><span class="who">侦探小说迷</span><span class="chip">推理爱好者</span><span class="src">编者视角</span></div><p class="text">一句话。概率：「已知硬币是公平的，连出 10 次正面有多大可能？」似然：「已经连出 10 次正面了，『这枚硬币是公平的』这个说法有多像真的？」一个从原因推结果，一个从结果反推原因。</p></div></div></div><div class="comment"><div class="meta"><span class="who">炼丹师</span><span class="chip">AI 训练 / 工程</span><span class="src">编者视角</span></div><p class="text">训练模型 = 调参数，让真实数据看起来最「像」是这个模型生成的。这就是最大似然。</p></div>
+    <p class="empty">你的理解跟上面哪条不一样？<a href="https://github.com/Snoop2023/plain-terms/edit/main/.github/ISSUE_TEMPLATE/补一条理解.yml">在 GitHub 上补一条</a> —— 背景不同的人各说一遍，下一个人就懂了。</p>
+  </section>
+
+  <section class="field" style="margin-top:2rem">
+    <h2>动手改</h2>
+    <p style="font-size:.92rem;color:var(--muted)">
+      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/probability/likelihood.md">编辑这个词条</a> ·
+      <a href="../index.html#概率与信息">看看同一章里的其它词</a>
+    </p>
+  </section>
+</article>
+
+<footer class="site">
+  <p>每一页都欢迎 PR：加词条、改定义、补一条你的理解。</p>
+  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，仅作短引用并注明出处；如有异议请开 Issue，我们会删改。</p>
+</footer>
+</div>
+</body>
+</html>

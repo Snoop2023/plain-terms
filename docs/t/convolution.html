@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>卷积 · 人话术语</title>
+<meta name="description" content="数学与 AI 术语的定义、词源，以及评论区里不同背景的人各自的讲法。">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+  <h1><a href="../index.html">人话术语</a></h1>
+  <p>一个词，四种讲法，一群不同背景的人各自说一遍</p>
+</header>
+<article class="term">
+  <header>
+    <h1>卷积<span class="en">convolution</span></h1>
+    <div class="badges">
+      <span class="badge accurate">✅ 中文其实准，知道字的本义就懂</span>
+      <span class="chip">线性代数</span>
+      
+    </div>
+  </header>
+
+  <section class="field plain">
+    <h2>人话</h2>
+    <p>拿一个小窗口沿着数据滑动，每到一个位置就把窗口里的数加权求和。信号里的理解：每个时刻的输入都会留下一段「余波」，当前输出是过去所有余波叠在一起的结果，也就是「瞬时行为的持续性结果」。FIR 滤波器、CNN 的核心都是它。</p>
+  </section>
+
+  <section class="field"><h2>英文释义</h2><p>con「一起」+ volve「卷、转」（revolve 旋转、evolve 演化）= 卷在一起。计算时要把一个序列翻转过来，再和另一个卷着滑过去。</p></section>
+<section class="field"><h2>英文来源</h2><p>拉丁 <em>convolvere</em>「卷起来」。</p></section>
+<section class="field"><h2>中文来源</h2><p>卷 = 卷动、翻转，积 = 乘积再累加，翻得准。</p></section>
+
+  <section class="comments">
+    <h2>评论区<span class="count"> · 8 条</span></h2>
+    <div class="comment"><div class="meta"><span class="who">自动化老师</span><span class="chip">自动化 / 控制</span><span class="src quoted">引述原话</span></div><p class="text">卷积就是瞬时行为的持续性结果。</p><div class="replies"><div class="comment"><div class="meta"><span class="who">网友</span><span class="chip">网友</span><span class="src quoted">引述原话</span></div><p class="text">每一个时刻发生的输入，都会产生一段持续的响应；系统当前的输出，是历史上所有输入各自延续至今的效应叠加总和。</p></div><div class="comment"><div class="meta"><span class="who">网友</span><span class="chip">网友</span><span class="src quoted">引述原话</span></div><p class="text">卷积就是因果系统过去对未来影响的叠加。</p></div></div></div><div class="comment"><div class="meta"><span class="who">BMS 老电工</span><span class="chip">动力电池 / 嵌入式</span><span class="src">编者视角</span></div><p class="text">写过 FIR 滤波器的，早就写过卷积了：<code>y[n] = Σ h[k]·x[n−k]</code>。h 是滤波系数，也就是每个输入留下的「余波形状」。</p><div class="replies"><div class="comment"><div class="meta"><span class="who">吐槽役</span><span class="chip">非本专业读者</span><span class="src">编者视角</span></div><p class="text">那为什么要「翻转」？</p></div><div class="comment"><div class="meta"><span class="who">BMS 老电工</span><span class="chip">动力电池 / 嵌入式</span><span class="src">编者视角</span></div><p class="text">h[k] 的意思是「k 步之前的输入，现在还剩多少影响」。越早的输入 k 越大，写成公式自然就像倒过来卷，没有什么玄学。</p></div></div></div><div class="comment"><div class="meta"><span class="who">炼丹师</span><span class="chip">AI 训练 / 工程</span><span class="src">编者视角</span></div><p class="text">CNN 里的「卷积」其实不翻转，严格说叫互相关。大家都叫卷积，习惯了。</p></div><div class="comment"><div class="meta"><span class="who">数学系路人</span><span class="chip">数学专业</span><span class="src">编者视角</span></div><p class="text">时域卷积 = 频域相乘。所以滤波器在频域里只是一个乘法。</p></div>
+    <p class="empty">你的理解跟上面哪条不一样？<a href="https://github.com/Snoop2023/plain-terms/edit/main/.github/ISSUE_TEMPLATE/补一条理解.yml">在 GitHub 上补一条</a> —— 背景不同的人各说一遍，下一个人就懂了。</p>
+  </section>
+
+  <section class="field" style="margin-top:2rem">
+    <h2>动手改</h2>
+    <p style="font-size:.92rem;color:var(--muted)">
+      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/linear-algebra/convolution.md">编辑这个词条</a> ·
+      <a href="../index.html#线性代数">看看同一章里的其它词</a>
+    </p>
+  </section>
+</article>
+
+<footer class="site">
+  <p>每一页都欢迎 PR：加词条、改定义、补一条你的理解。</p>
+  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，仅作短引用并注明出处；如有异议请开 Issue，我们会删改。</p>
+</footer>
+</div>
+</body>
+</html>

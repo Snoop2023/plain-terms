@@ -2,7 +2,7 @@
 
 **一个词，几种讲法，一群不同背景的人各自说一遍。**
 
-![导数页面：四段正文 + 评论区](docs/demo-derivative.png)
+![导数页面：四段正文 + 评论区](assets/demo-derivative.png)
 
 教材给每个术语一个定义。看懂那个定义，靠的是运气——它假设你已经有某个领域的手感。
 这里换成另一套办法：同一个词，让不同背景的人各讲一遍。
@@ -40,8 +40,12 @@ templates/                    站点模板（style.css 换肤就改这一个）
 site.yaml                     站名、仓库地址、章节顺序
 tools/import_obsidian_note.py 一次性迁移脚本（从 Obsidian 笔记拆出词条）
 tools/build_site.py           生成静态站点，只依赖 Python 标准库 + pyyaml
-_site/                        构建产物，不提交
+docs/                         已发布的那一份（构建产物，别手改）
+assets/                       README 里用的图
+_site/                        本地预览产物，不提交
 ```
+
+投稿时**只改 `terms/` 和 `templates/`**，别碰 `docs/` ——那个目录每次构建都会被整体覆盖。
 
 ## 本地预览
 

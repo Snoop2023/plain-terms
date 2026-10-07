@@ -1,0 +1,346 @@
+[
+ {
+  "id": "algebra",
+  "zh": "代数",
+  "en": "algebra",
+  "category": "基础数学",
+  "verdict": "accurate",
+  "plain": "用字母代替具体的数来算。不写 3+5，写 a+b，这样一条规则对所有数都成立。"
+ },
+ {
+  "id": "geometry",
+  "zh": "几何",
+  "en": "geometry",
+  "category": "基础数学",
+  "verdict": "misleading",
+  "plain": "研究形状、大小、位置、角度的数学：三角形、圆、平行线这些。"
+ },
+ {
+  "id": "function",
+  "zh": "函数",
+  "en": "function",
+  "category": "基础数学",
+  "verdict": "accurate",
+  "plain": "一台「输入→输出」的机器。给它一个 x，它按固定规则给出一个 y；同一个 x 永远得到同一个 y。x 一变，y 跟着变。"
+ },
+ {
+  "id": "parameter",
+  "zh": "参数",
+  "en": "parameter",
+  "category": "基础数学",
+  "verdict": "accurate",
+  "plain": "决定公式或模型「长什么样」的可调数字。y = kx + b，换一组 k、b 就是另一条直线，k、b 就是参数。神经网络的参数就是那几百万个权重。"
+ },
+ {
+  "id": "equation",
+  "zh": "方程",
+  "en": "equation",
+  "category": "基础数学",
+  "verdict": "misleading",
+  "plain": "带未知数的等式，左边 = 右边。解方程就是找出让两边真正相等的那个未知数。"
+ },
+ {
+  "id": "coefficient",
+  "zh": "系数",
+  "en": "coefficient",
+  "category": "基础数学",
+  "verdict": "accurate",
+  "plain": "乘在变量前面的数。3x 里的 3 就是系数，它决定 x 的影响有多大。"
+ },
+ {
+  "id": "derivative",
+  "zh": "导数",
+  "en": "derivative",
+  "category": "微积分",
+  "verdict": "misleading",
+  "plain": "变化率。x 挪一点点，y 跟着变多少，这个比例就是导数。画在图上，是曲线在这一点切线的斜率。AI 里：某个参数微调一点，loss 变多少。"
+ },
+ {
+  "id": "differential",
+  "zh": "微分",
+  "en": "differential",
+  "category": "微积分",
+  "verdict": "accurate",
+  "plain": "一个极小极小的变化量。dx = x 的一丁点变化，dy = 跟着产生的 y 的一丁点变化。导数就是 dy ÷ dx。"
+ },
+ {
+  "id": "calculus",
+  "zh": "微积分",
+  "en": "calculus",
+  "category": "微积分",
+  "verdict": "accurate",
+  "plain": "研究「变化」和「累加」的数学。微分管「此刻变得多快」，积分管「一共累积了多少」，两者互为逆运算。"
+ },
+ {
+  "id": "gradient",
+  "zh": "梯度",
+  "en": "gradient",
+  "category": "微积分",
+  "verdict": "accurate",
+  "plain": "多个输入时，每个输入各有一个导数，把它们排成一个向量就是梯度。它指向「函数涨得最快」的方向；反着走就是下坡最快，这就是梯度下降。"
+ },
+ {
+  "id": "integral",
+  "zh": "积分",
+  "en": "integral",
+  "category": "微积分",
+  "verdict": "accurate",
+  "plain": "把无数个碎片累加成总量。每一小段时间的电流 × 时间，全部加起来就是总电量。画在图上，是曲线下面的面积。"
+ },
+ {
+  "id": "convolution",
+  "zh": "卷积",
+  "en": "convolution",
+  "category": "线性代数",
+  "verdict": "accurate",
+  "plain": "拿一个小窗口沿着数据滑动，每到一个位置就把窗口里的数加权求和。信号里的理解：每个时刻的输入都会留下一段「余波」，当前输出是过去所有余波叠在一起的结果，也就是「瞬时行为的持续性结果」。FIR 滤波器、CNN 的核心都是它。"
+ },
+ {
+  "id": "vector",
+  "zh": "向量",
+  "en": "vector",
+  "category": "线性代数",
+  "verdict": "accurate",
+  "plain": "一串有顺序的数，比如 [3, 1, 4]。几何上是一支带方向和长度的箭头。AI 里每个 token 都变成一个几百维的向量。"
+ },
+ {
+  "id": "tensor",
+  "zh": "张量",
+  "en": "tensor",
+  "category": "线性代数",
+  "verdict": "misleading",
+  "plain": "AI 里就是多维数组。0 维是一个数，1 维是向量，2 维是矩阵，3 维以上统称张量。GPT 里常见的 (B, T, C) 就是一个 3 维张量。"
+ },
+ {
+  "id": "scalar",
+  "zh": "标量",
+  "en": "scalar",
+  "category": "线性代数",
+  "verdict": "accurate",
+  "plain": "只有大小、没有方向的一个数。温度、质量都是标量。代码里就是一个 float。"
+ },
+ {
+  "id": "orthogonal",
+  "zh": "正交",
+  "en": "orthogonal",
+  "category": "线性代数",
+  "verdict": "accurate",
+  "plain": "两个向量互相垂直。直观上就是「互不相干」：沿一个方向走，在另一个方向上的位置完全不变。"
+ },
+ {
+  "id": "eigenvalue",
+  "zh": "特征值",
+  "en": "eigenvalue",
+  "category": "线性代数",
+  "verdict": "misleading",
+  "plain": "大多数向量被矩阵一乘，方向就变了。但有少数特殊方向，乘完只是被拉长或缩短，方向不变。这些方向叫特征向量，拉伸的倍数叫特征值。它们描述了这个矩阵「最本质的行为」。"
+ },
+ {
+  "id": "matrix",
+  "zh": "矩阵",
+  "en": "matrix",
+  "category": "线性代数",
+  "verdict": "accurate",
+  "plain": "排成行和列的数字表格。它的真正用途是做「变换机器」：一个向量乘上矩阵，变成另一个向量（旋转、拉伸、投影）。神经网络每一层的核心就是一次矩阵乘法。"
+ },
+ {
+  "id": "linear",
+  "zh": "线性",
+  "en": "linear",
+  "category": "线性代数",
+  "verdict": "accurate",
+  "plain": "满足两条规则：输入放大 2 倍，输出也放大 2 倍；两个输入分开处理再相加，等于先相加再处理。矩阵乘法是线性的，所以神经网络必须在层与层之间插非线性函数，不然叠 100 层也只相当于 1 层。"
+ },
+ {
+  "id": "norm",
+  "zh": "范数",
+  "en": "norm",
+  "category": "线性代数",
+  "verdict": "both_hard",
+  "plain": "向量的「长度」或「大小」。最常用的 L2 范数：每个分量平方、加起来、开根号，就是勾股定理。正则化用它衡量参数有多大。"
+ },
+ {
+  "id": "cross-entropy",
+  "zh": "交叉熵",
+  "en": "cross-entropy",
+  "category": "概率与信息",
+  "verdict": "both_hard",
+  "plain": "拿「模型猜的概率」去给「真实答案」打分。模型给真实答案的概率越高，交叉熵越低。GPT 训练时压低的那个 loss 就是它；只有一个正确答案时，它就等于「−log(正确答案的概率)」。"
+ },
+ {
+  "id": "likelihood",
+  "zh": "似然",
+  "en": "likelihood",
+  "category": "概率与信息",
+  "verdict": "misleading",
+  "plain": "概率和似然是同一个公式，只是问法反过来。概率：参数定了，问「这组数据出现的可能性多大」。似然：数据已经摆在这，问「哪组参数最能解释它」。训练模型 = 找让真实数据似然最大的参数。"
+ },
+ {
+  "id": "variance",
+  "zh": "方差",
+  "en": "variance",
+  "category": "概率与信息",
+  "verdict": "accurate",
+  "plain": "衡量一组数「抖得多厉害」。每个数减去平均值、平方、再取平均。方差大 = 很分散，方差小 = 很集中。开根号就是标准差。"
+ },
+ {
+  "id": "expectation",
+  "zh": "期望",
+  "en": "expectation",
+  "category": "概率与信息",
+  "verdict": "misleading",
+  "plain": "按概率加权的平均值。掷骰子：1~6 每个乘以 1/6 再相加 = 3.5。意思是「重复无数次，平均下来是多少」。和「希望」没有关系。"
+ },
+ {
+  "id": "entropy",
+  "zh": "熵",
+  "en": "entropy",
+  "category": "概率与信息",
+  "verdict": "both_hard",
+  "plain": "平均「意外程度」。越难猜的事，结果出来越让人意外，熵越高。抛均匀硬币熵是 1 bit；结果早就确定的事熵是 0。信息论里：给结果编码，平均最少要多少 bit。"
+ },
+ {
+  "id": "stochastic",
+  "zh": "随机",
+  "en": "stochastic",
+  "category": "概率与信息",
+  "verdict": "accurate",
+  "plain": "带不确定性、每次结果可能不同。「随机梯度下降」= 每次不用全部数据，只抽一小批来估算下坡方向，快，但方向有噪声。"
+ },
+ {
+  "id": "logits",
+  "zh": "logits",
+  "en": "logits",
+  "category": "AI 专用词",
+  "verdict": "both_hard",
+  "plain": "模型最后一层吐出来的原始分数，还没换成概率，可正可负、大小不限。送进 softmax 才变成概率。"
+ },
+ {
+  "id": "softmax",
+  "zh": "softmax",
+  "en": "softmax",
+  "category": "AI 专用词",
+  "verdict": "accurate",
+  "plain": "把一组任意大小的分数变成概率：全变成正数，加起来等于 1。分最高的拿到最大的概率，但不独占，其他选项也留一点机会。"
+ },
+ {
+  "id": "bias",
+  "zh": "偏置",
+  "en": "bias",
+  "category": "AI 专用词",
+  "verdict": "misleading",
+  "plain": "加在结果上的一个常数，让输出整体往上或往下平移。y = wx + b 里的 b。没有它，直线永远只能过原点。"
+ },
+ {
+  "id": "embedding",
+  "zh": "嵌入",
+  "en": "embedding",
+  "category": "AI 专用词",
+  "verdict": "misleading",
+  "plain": "给每个 token 配一个向量。做法是拿 token 的 ID 去一张大表里查一行，这张表是训练出来的，意思相近的词，查出来的向量也相近。GPT 拿到文字后做的第一件事就是查这张表。"
+ },
+ {
+  "id": "normalization",
+  "zh": "归一化",
+  "en": "normalization",
+  "category": "AI 专用词",
+  "verdict": "misleading",
+  "plain": "把一组数缩放到统一的尺度。具体缩成什么样看上下文，常见三种：缩到 0~1；调成平均 0、方差 1（BatchNorm、LayerNorm 就是这种）；让一组数加起来等于 1，变成概率（softmax 就是这种）。"
+ },
+ {
+  "id": "fit",
+  "zh": "拟合",
+  "en": "fit",
+  "category": "AI 专用词",
+  "verdict": "accurate",
+  "plain": "调整模型的参数，让它的曲线尽量贴着数据点走。"
+ },
+ {
+  "id": "loss",
+  "zh": "损失",
+  "en": "loss",
+  "category": "AI 专用词",
+  "verdict": "accurate",
+  "plain": "一个分数，表示模型这次猜得有多错。越小越好。训练的全部目标就是把它一点点压低。"
+ },
+ {
+  "id": "inference",
+  "zh": "推理",
+  "en": "inference",
+  "category": "AI 专用词",
+  "verdict": "misleading",
+  "plain": "把训练好的模型拿来用：喂进输入，跑一遍前向计算，拿到输出。和「训练」相对，训练是改参数，推理是参数固定只跑计算。你用 ChatGPT 聊天，服务器那边做的就是推理。"
+ },
+ {
+  "id": "weight",
+  "zh": "权重",
+  "en": "weight",
+  "category": "AI 专用词",
+  "verdict": "accurate",
+  "plain": "每个输入要乘上的系数，代表这个输入对输出的影响有多大。权重大 = 这个输入说话分量重。训练模型，本质上就是不断调整这几百万个权重。"
+ },
+ {
+  "id": "regularization",
+  "zh": "正则化",
+  "en": "regularization",
+  "category": "AI 专用词",
+  "verdict": "misleading",
+  "plain": "给模型加约束或惩罚，不让参数变得太大、模型变得太复杂，从而防止过拟合。常见做法：在 loss 上加一项「参数越大罚越多」（权重衰减），或训练时随机关掉一些神经元（dropout）。"
+ },
+ {
+  "id": "generalization",
+  "zh": "泛化",
+  "en": "generalization",
+  "category": "AI 专用词",
+  "verdict": "accurate",
+  "plain": "模型在没见过的新数据上也做得好。这才是训练真正要的东西：不是记住题目，而是学会背后的规律。"
+ },
+ {
+  "id": "attention",
+  "zh": "注意力",
+  "en": "attention",
+  "category": "AI 专用词",
+  "verdict": "misleading",
+  "plain": "每个位置都去看其它位置，按「和我有多相关」打分，再按分数加权，把其它位置的信息取过来。比如句子里的「它」，会给前文中它指代的那个名词打高分。这是 Transformer 的核心。"
+ },
+ {
+  "id": "activation-function",
+  "zh": "激活函数",
+  "en": "activation function",
+  "category": "AI 专用词",
+  "verdict": "both_hard",
+  "plain": "每一层矩阵乘法之后加的一个非线性函数，比如 ReLU（负数变 0，正数不变）、tanh（压到 −1 到 1 之间）。作用是给网络加「弯折」，没有它，多层网络就退化成一层。"
+ },
+ {
+  "id": "token",
+  "zh": "词元",
+  "en": "token",
+  "category": "AI 专用词",
+  "verdict": "misleading",
+  "plain": "文本被切成的最小单位，可能是一个字、半个单词、一个标点或一个空格。模型不直接读文字，读的是一串 token 编号。"
+ },
+ {
+  "id": "hyperparameter",
+  "zh": "超参数",
+  "en": "hyperparameter",
+  "category": "AI 专用词",
+  "verdict": "misleading",
+  "plain": "训练开始前由人来定的设置，比如学习率、层数、批大小。普通参数（权重）是训练自己学出来的；超参数是人手拧的旋钮。"
+ },
+ {
+  "id": "overfitting",
+  "zh": "过拟合",
+  "en": "overfitting",
+  "category": "AI 专用词",
+  "verdict": "accurate",
+  "plain": "模型把训练数据连带噪声一起背下来了，训练集上分数很好，换一批没见过的数据就不行。就像学生背答案不理解题，换道题就不会。"
+ },
+ {
+  "id": "robust",
+  "zh": "鲁棒",
+  "en": "robust",
+  "category": "AI 专用词",
+  "verdict": "misleading",
+  "plain": "稳健、抗干扰。输入有噪声、环境变化了，结果依然靠得住。"
+ }
+]
