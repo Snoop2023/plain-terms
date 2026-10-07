@@ -2,7 +2,15 @@
 
 **一个词，几种讲法，一群不同背景的人各自说一遍。**
 
-![导数页面：四段正文 + 评论区](assets/demo-derivative.png)
+首页是一条词一条推的信息流：
+
+![信息流：置顶方法论 + 一条词一条推](assets/demo-feed.png)
+
+点开单独一条，能看到完整四段 + 词源 + 评论区：
+
+![词条页：造词现场、人话、词源、评论区](assets/demo-derivative.png)
+
+线上站点：<https://snoop2023.github.io/plain-terms/>
 
 教材给每个术语一个定义。看懂那个定义，靠的是运气——它假设你已经有某个领域的手感。
 这里换成另一套办法：同一个词，让不同背景的人各讲一遍。
@@ -16,15 +24,22 @@
 
 ## 一条术语长什么样
 
-每个词一个 markdown 文件，四段正文 + 一个评论区：
+每个词一个 markdown 文件。**第一段是「造词现场」**：回到这个词被造出来之前，人们在解决什么问题，名字从哪儿借来的。然后才轮到定义和评论区。
 
-| 段 | 内容 |
-|---|---|
-| 人话 | 它到底是什么、用来干嘛 |
-| 英文释义 | 拆英文字面意思（derive「推导出来」→ derivative「推导出来的东西」） |
-| 英文来源 | 词根从哪来 |
-| 中文来源 | 中文字怎么来的、译得准不准 |
-| 评论区 | 不同背景的人各自的讲法，可嵌套回复 |
+| 顺序 | 段 | 内容 |
+|---|---|---|
+| 1 | 造词现场 | 当初要解决什么问题，名字怎么借来的 |
+| 2 | 人话 | 它到底指什么、用来干嘛 |
+| 3 | 英文释义 | 拆英文字面意思（derive「推导出来」→ derivative「推导出来的东西」） |
+| 4 | 英文来源 | 词根从哪来 |
+| 5 | 中文来源 | 中文字怎么来的、译得准不准 |
+| 6 | 评论区 | 不同背景的人各自的讲法，可嵌套回复 |
+
+为什么把「造词现场」排在定义前面，写在 [METHOD.md](METHOD.md) 里。
+
+## 点赞与讨论
+
+每一页下面挂着 GitHub Discussions（giscus）。登录一次，点赞（reaction）和留言都算数。票多的评论由维护者提进上面的正式评论区 —— 所以「哪条讲得好」不用靠哪个人拍板。
 
 标题后带一个标记：
 
@@ -35,14 +50,18 @@
 ## 目录结构
 
 ```
-terms/<章节>/<英文名>.md      一个词一个文件，正文 + 评论区
-templates/                    站点模板（style.css 换肤就改这一个）
-site.yaml                     站名、仓库地址、章节顺序
-tools/import_obsidian_note.py 一次性迁移脚本（从 Obsidian 笔记拆出词条）
-tools/build_site.py           生成静态站点，只依赖 Python 标准库 + pyyaml
-docs/                         已发布的那一份（构建产物，别手改）
-assets/                       README 里用的图
-_site/                        本地预览产物，不提交
+terms/<章节>/<英文名>.md        一个词一个文件：造词现场 + 四段正文 + 评论区
+METHOD.md                       为什么这么排（项目方法论）
+templates/feed.html             首页信息流
+templates/post.html             单个词条页
+templates/style.css             换肤就改这一个
+site.yaml                       站名、仓库地址、章节顺序、giscus 配置
+tools/build_site.py             生成静态站点，只依赖 Python 标准库 + pyyaml
+tools/import_obsidian_note.py   一次性迁移脚本（从 Obsidian 笔记拆出词条）
+tools/add_origin_stories.py     一次性脚本（给每个词条插「造词现场」）
+docs/                           已发布的那一份（构建产物，别手改）
+assets/                         README 里用的图
+_site/                          本地预览产物，不提交
 ```
 
 投稿时**只改 `terms/` 和 `templates/`**，别碰 `docs/` ——那个目录每次构建都会被整体覆盖。
