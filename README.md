@@ -109,6 +109,23 @@ open _site/index.html        # 或者 python3 -m http.server -d _site 8000
 - 代码（`tools/`、`templates/`、CI）：MIT。
 - 收录的他人原话版权归原作者，本站只做短引用并注明出处。
 
+## 维护者备忘
+
+两件只有仓库所有者能做的一次性设置：
+
+1. **装 giscus App**（否则页面底下的讨论区是空的）：<https://github.com/apps/giscus/installations/new> → 勾选本仓库。装完 `site.yaml` 里的 id 才真正生效。
+2. **给 CI 开权限**（否则改完词条站点不会自动更新，得手动跑构建）：
+   ```bash
+   gh auth refresh -h github.com -s workflow
+   ```
+   现在发布走的是「分支部署」（`main` 的 `docs/` 目录）。开了权限之后把 `.github/workflows/pages.yml` 推上去，改成 Actions 构建部署，`docs/` 就可以删掉。
+
+手动更新一次线上站点的办法：
+
+```bash
+python3 tools/build_site.py docs && git add docs && git commit -m "更新站点" && git push
+```
+
 ## 姊妹项目
 
 - **会说话的定律**（descriptive-naming）：给人名定律取描述式新名，一眼听懂内容。同一套想法用在「命名」上。
