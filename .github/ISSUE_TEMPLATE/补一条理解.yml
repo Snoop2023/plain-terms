@@ -1,0 +1,41 @@
+name: 补一条理解
+description: 你是怎么理解这个词的？（不用会 git，填完就行）
+title: "[理解] <词条名> —— "
+labels: ["评论投稿"]
+body:
+  - type: input
+    id: term
+    attributes:
+      label: 哪个词
+      placeholder: 卷积 / 注意力 / 特征值……
+    validations:
+      required: true
+  - type: input
+    id: background
+    attributes:
+      label: 你的背景
+      description: 一句话就够。背景比口才重要，读者找的是「跟我差不多的人」。
+      placeholder: 动力电池 BMS 嵌入式，三年 / 大二自动化 / 做数据库的
+    validations:
+      required: true
+  - type: textarea
+    id: understanding
+    attributes:
+      label: 你怎么理解它
+      description: 用你本行的话讲。工作里怎么算它、代码里长什么样、你当初怎么绕明白的。口语、半懂、猜错的经历都欢迎。
+    validations:
+      required: true
+  - type: input
+    id: oneline
+    attributes:
+      label: 只能留一句的话，你留哪句
+    validations:
+      required: false
+  - type: input
+    id: credit
+    attributes:
+      label: 署名
+      description: 昵称或 GitHub 账号，我们照这个挂名。
+      placeholder: "@你的账号"
+    validations:
+      required: false

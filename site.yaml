@@ -1,0 +1,32 @@
+# 站点与仓库配置。改这一个文件就能改站名、仓库地址、投稿入口。
+site:
+  title: 术语评论区
+  tagline: 一个词，四种讲法，一群不同背景的人各自说一遍
+  description: 数学与 AI 术语的定义、词源，以及评论区里不同背景的人各自的讲法。
+  intro: >
+    教材给每个词一个定义。看懂一个定义靠的是运气。这里换成另一套办法：
+    同一个词，让不同背景的人各讲一遍 —— 写过 BMS 的人怎么理解导数，
+    搞数据库的人怎么理解注意力。看得懂其中一条就够，因为「跟我差不多的人懂了」
+    本身就是最有效的信号。
+  footer_note: 每一页都欢迎 PR：加词条、改定义、补一条你的理解。
+
+# 仓库地址（建好后把 USER/REPO 换成真实值，站点里的编辑链接会自动跟上）
+repo:
+  url: "https://github.com/Snoop2023/term-comments"
+  branch: main
+  terms_dir: terms
+  new_term_path: ".github/ISSUE_TEMPLATE/新词条.yml"
+  new_comment_path: ".github/ISSUE_TEMPLATE/补一条理解.yml"
+
+categories:
+  基础数学: math
+  微积分: calculus
+  线性代数: linear-algebra
+  概率与信息: probability
+  AI 专用词: ai
+
+# 评论投票用 GitHub Discussions（站点上挂 giscus 时填这两个 id；
+# 留空则页面只显示静态收录的评论）
+giscus:
+  repo_id: ""
+  category_id: ""

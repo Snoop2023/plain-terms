@@ -1,0 +1,48 @@
+<div class="lede">
+<p>{{intro}}</p>
+</div>
+
+<div class="legend">
+  <span><b class="mark">✅</b> {{legend_accurate}}</span>
+  <span><b class="mark">⚠️</b> {{legend_misleading}}</span>
+  <span><b class="mark">🔁</b> {{legend_both_hard}}</span>
+</div>
+
+<div class="searchbar">
+  <input id="q" type="search" placeholder="搜中文名、英文名、正文内容……" autocomplete="off">
+</div>
+
+<div id="list">
+{{sections}}
+</div>
+
+<p class="empty" id="noresult" hidden>没搜到。要不要<a href="{{new_term_url}}">新加一个词条</a>？</p>
+
+{{patterns}}
+
+<script>
+(function () {
+  var q = document.getElementById('q');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var cats = Array.prototype.slice.call(document.querySelectorAll('h2.cat'));
+  var empty = document.getElementById('noresult');
+  q.addEventListener('input', function () {
+    var v = q.value.trim().toLowerCase();
+    var hits = 0;
+    cards.forEach(function (c) {
+      var ok = !v || c.dataset.search.indexOf(v) !== -1;
+      c.hidden = !ok;
+      if (ok) hits++;
+    });
+    cats.forEach(function (h) {
+      var any = Array.prototype.slice.call(
+        document.querySelectorAll('.cards[data-cat="' + h.dataset.cat + '"] .card')
+      ).some(function (c) { return !c.hidden; });
+      h.hidden = !any;
+      var grid = document.querySelector('.cards[data-cat="' + h.dataset.cat + '"]');
+      if (grid) grid.hidden = !any;
+    });
+    empty.hidden = hits !== 0;
+  });
+})();
+</script>

@@ -1,0 +1,34 @@
+---
+id: token
+term_zh: 词元
+term_en: token
+category: AI 专用词
+verdict: misleading
+verdict_note: 中文有歧义或误导，先看英文
+aliases: []
+related: []
+contributors: []
+updated: '2026-10-05'
+---
+
+# 词元 token
+
+## 人话
+
+文本被切成的最小单位，可能是一个字、半个单词、一个标点或一个空格。模型不直接读文字，读的是一串 token 编号。
+
+## 英文释义
+
+token 本义「记号、代币、信物」（地铁币就叫 token）。一个 token 是代表一小段文字的记号。
+
+## 英文来源
+
+古英语 *tācn*「记号」，teach（教）同根。
+
+## 中文来源
+
+AI 里译「词元」。⚠️ 别和网络安全里的「令牌」（登录凭证）混淆，那是同一个英文词的另一种用法。
+
+## 评论区
+
+_还没有评论。欢迎在 Issue / PR 里补一条你的理解。_

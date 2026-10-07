@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "术语评论区 —— 词条格式",
+  "type": "object",
+  "required": ["id", "term_zh", "term_en", "category", "verdict"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "英文名的短横线写法，必须等于文件名"
+    },
+    "term_zh": { "type": "string", "description": "中文名；纯英文词就跟 term_en 一样" },
+    "term_en": { "type": "string" },
+    "category": {
+      "enum": ["基础数学", "微积分", "线性代数", "概率与信息", "AI 专用词"],
+      "description": "必须与 site.yaml 的 categories 一致"
+    },
+    "verdict": {
+      "enum": ["accurate", "misleading", "both_hard"],
+      "description": "✅ accurate 中文其实准 / ⚠️ misleading 中文有歧义 / 🔁 both_hard 两边都不直观"
+    },
+    "verdict_note": { "type": "string" },
+    "aliases": { "type": "array", "items": { "type": "string" } },
+    "related": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "相关词条的 id"
+    },
+    "contributors": { "type": "array", "items": { "type": "string" } },
+    "updated": { "type": "string" }
+  },
+  "additionalProperties": true
+}

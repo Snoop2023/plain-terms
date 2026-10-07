@@ -1,0 +1,33 @@
+name: 新词条
+description: 想加一个现在没有的词
+title: "[词条] "
+labels: ["新词条"]
+body:
+  - type: input
+    id: term
+    attributes:
+      label: 词（中英文）
+      placeholder: 导数 derivative
+    validations:
+      required: true
+  - type: input
+    id: chapter
+    attributes:
+      label: 该放哪一章
+      description: 基础数学 / 微积分 / 线性代数 / 概率与信息 / AI 专用词。想开新章节请单独说明。
+    validations:
+      required: true
+  - type: textarea
+    id: plain
+    attributes:
+      label: 人话怎么说
+      description: 它到底是什么、用来干嘛。别抄教材定义。
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: 为什么值得收
+      description: 它容易被误解在哪？中文译名有问题吗？
+    validations:
+      required: false

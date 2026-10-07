@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 收录的原话想撤回
+    url: https://github.com/Snoop2023/term-comments/issues/new
+    about: 如果你是被引述的人，不想被收录，开个 Issue 说一声，我们删掉。
