@@ -25,8 +25,10 @@ categories:
   概率与信息: probability
   AI 专用词: ai
 
-# 评论投票用 GitHub Discussions（站点上挂 giscus 时填这两个 id；
-# 留空则页面只显示静态收录的评论）
+# 评论与点赞走 GitHub Discussions（giscus）。id 换仓库时用 GraphQL 重新取：
+# gh api graphql -f query='{ repository(owner:"USER", name:"REPO") { id discussionCategories(first:10){nodes{id name}} } }'
 giscus:
-  repo_id: ""
-  category_id: ""
+  repo: Snoop2023/plain-terms
+  repo_id: R_kgDOU_OcQw
+  category: General
+  category_id: DIC_kwDOU_OcQ84DHPDs

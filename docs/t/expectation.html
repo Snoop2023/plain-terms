@@ -10,46 +10,70 @@
 <body>
 <div class="wrap">
 <header class="site">
-  <h1><a href="../index.html">人话术语</a></h1>
-  <p>一个词，四种讲法，一群不同背景的人各自说一遍</p>
+  <span class="logo">话</span>
+  <div>
+    <h1><a href="../index.html">人话术语</a></h1>
+    <p class="tag">一个词，四种讲法，一群不同背景的人各自说一遍</p>
+  </div>
+  <nav><a href="../method.html">怎么用</a></nav>
 </header>
-<article class="term">
-  <header>
+<article class="post single" id="expectation">
+  <a class="avatar probability" href="../index.html">期</a>
+  <div class="body">
     <h1>期望<span class="en">expectation</span></h1>
-    <div class="badges">
-      <span class="badge misleading">⚠️ 中文有歧义或误导，先看英文</span>
-      <span class="chip">概率与信息</span>
+    <div class="tags">
+      <span class="tagchip">概率与信息</span>
+      <span class="tagchip">⚠️ 中文有歧义或误导，先看英文</span>
       
     </div>
-  </header>
 
-  <section class="field plain">
-    <h2>人话</h2>
-    <p>按概率加权的平均值。掷骰子：1~6 每个乘以 1/6 再相加 = 3.5。意思是「重复无数次，平均下来是多少」。和「希望」没有关系。</p>
-  </section>
+    <section class="field said">
+      <h2>造词现场</h2>
+      <p>要处理的问题是：赌局里我平均能赢多少。惠更斯 1657 年研究掷骰子，把每个结果乘上它的概率再全部加起来 —— 这就是他造出来的算法。名字借 expect「预期」。中文直译成「期望」，可中文的「期望」带感情色彩，读作平均值更准。</p>
+    </section>
 
-  <section class="field"><h2>英文释义</h2><p>expect「预期」→ expectation「预期能得到多少」。起源于赌局：这一把平均预期能赢多少钱。</p></section>
+    <section class="field plain">
+      <h2>人话</h2>
+      <p>按概率加权的平均值。掷骰子：1~6 每个乘以 1/6 再相加 = 3.5。意思是「重复无数次，平均下来是多少」。和「希望」没有关系。</p>
+    </section>
+
+    <section class="field"><h2>英文释义</h2><p>expect「预期」→ expectation「预期能得到多少」。起源于赌局：这一把平均预期能赢多少钱。</p></section>
 <section class="field"><h2>英文来源</h2><p>拉丁 <em>exspectare</em>「向外看、等待」。惠更斯 1657 年研究赌博问题时引入。</p></section>
 <section class="field"><h2>中文来源</h2><p>直译。⚠️ 中文「期望」带感情色彩，读作「平均值」更准。</p></section>
 
-  <section class="comments">
-    <h2>评论区<span class="count"> · 3 条</span></h2>
-    <div class="comment"><div class="meta"><span class="who">吐槽役</span><span class="chip">非本专业读者</span><span class="src">编者视角</span></div><p class="text">这个词坑了我一整个学期，一直以为它和「希望」有关。其实就是加权平均。</p></div><div class="comment"><div class="meta"><span class="who">赌场保安</span><span class="chip">概率 / 赌博</span><span class="src">编者视角</span></div><p class="text">轮盘赌每一注的期望都是负的。你今晚可能赢，但玩一万次一定亏。期望说的是长期平均，不是这一次。</p></div><div class="comment"><div class="meta"><span class="who">数学系路人</span><span class="chip">数学专业</span><span class="src">编者视角</span></div><p class="text">期望值不一定能真的出现。骰子的期望是 3.5，可你永远掷不出 3.5。</p></div>
-    <p class="empty">你的理解跟上面哪条不一样？<a href="https://github.com/Snoop2023/plain-terms/edit/main/.github/ISSUE_TEMPLATE/补一条理解.yml">在 GitHub 上补一条</a> —— 背景不同的人各说一遍，下一个人就懂了。</p>
-  </section>
+    <h2 class="block">评论区<span class="count"> · 3 条</span></h2>
+    <div id="comments"><div class="thread" id="c1"><div class="cm"><div class="meta"><span class="who">吐槽役</span><span class="tagchip">非本专业读者</span><span class="src">编者视角</span></div><p>这个词坑了我一整个学期，一直以为它和「希望」有关。其实就是加权平均。</p></div></div><div class="thread" id="c2"><div class="cm"><div class="meta"><span class="who">赌场保安</span><span class="tagchip">概率 / 赌博</span><span class="src">编者视角</span></div><p>轮盘赌每一注的期望都是负的。你今晚可能赢，但玩一万次一定亏。期望说的是长期平均，不是这一次。</p></div></div><div class="thread" id="c3"><div class="cm"><div class="meta"><span class="who">数学系路人</span><span class="tagchip">数学专业</span><span class="src">编者视角</span></div><p>期望值不一定能真的出现。骰子的期望是 3.5，可你永远掷不出 3.5。</p></div></div></div>
+    <p class="empty">你的讲法跟上面哪条不一样？写在下面，或者<a href="https://github.com/Snoop2023/plain-terms/issues/new">直接投一条</a>。</p>
 
-  <section class="field" style="margin-top:2rem">
-    <h2>动手改</h2>
-    <p style="font-size:.92rem;color:var(--muted)">
-      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/probability/expectation.md">编辑这个词条</a> ·
-      <a href="../index.html#概率与信息">看看同一章里的其它词</a>
-    </p>
-  </section>
+    <section class="discuss">
+      <p class="hint">👇 这一节是在 GitHub Discussions 里跑的：登录一次，点赞（reaction）和留言都算数。票多的评论会被提进上面的正式评论区。</p>
+      <script src="https://giscus.app/client.js"
+        data-repo="Snoop2023/plain-terms"
+        data-repo-id="R_kgDOU_OcQw"
+        data-category="General"
+        data-category-id="DIC_kwDOU_OcQ84DHPDs"
+        data-mapping="specific"
+        data-term="expectation"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous" async></script>
+    </section>
+
+    <footer class="pf">
+      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/probability/expectation.md">✏️ 编辑这个词条</a>
+      <a href="../index.html#expectation">🔗 回信息流</a>
+      <a href="https://github.com/Snoop2023/plain-terms/blob/main/terms/probability/expectation.md">📄 看源文件</a>
+    </footer>
+  </div>
 </article>
 
 <footer class="site">
   <p>每一页都欢迎 PR：加词条、改定义、补一条你的理解。</p>
-  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，仅作短引用并注明出处；如有异议请开 Issue，我们会删改。</p>
+  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，只作短引用并注明出处；本人不想被收录，开个 Issue 我们就删。</p>
 </footer>
 </div>
 </body>

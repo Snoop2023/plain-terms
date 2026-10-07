@@ -1,0 +1,38 @@
+<article class="post single" id="{{id}}">
+  <a class="avatar {{cat_slug}}" href="../index.html">{{initial}}</a>
+  <div class="body">
+    <h1>{{disp_zh}}<span class="en">{{disp_en}}</span></h1>
+    <div class="tags">
+      <span class="tagchip">{{category}}</span>
+      <span class="tagchip">{{verdict_mark}} {{verdict_note}}</span>
+      {{aliases}}
+    </div>
+
+    <section class="field said">
+      <h2>造词现场</h2>
+      {{origin}}
+    </section>
+
+    <section class="field plain">
+      <h2>人话</h2>
+      {{plain}}
+    </section>
+
+    {{fields}}
+
+    <h2 class="block">评论区<span class="count">{{comment_count}}</span></h2>
+    <div id="comments">{{comments}}</div>
+    <p class="empty">你的讲法跟上面哪条不一样？写在下面，或者<a href="{{new_comment_url}}">直接投一条</a>。</p>
+
+    <section class="discuss">
+      <p class="hint">👇 这一节是在 GitHub Discussions 里跑的：登录一次，点赞（reaction）和留言都算数。票多的评论会被提进上面的正式评论区。</p>
+      {{giscus}}
+    </section>
+
+    <footer class="pf">
+      <a href="{{edit_url}}">✏️ 编辑这个词条</a>
+      <a href="../index.html#{{id}}">🔗 回信息流</a>
+      <a href="{{repo_url}}/blob/main/{{path}}">📄 看源文件</a>
+    </footer>
+  </div>
+</article>

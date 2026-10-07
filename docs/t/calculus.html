@@ -10,46 +10,70 @@
 <body>
 <div class="wrap">
 <header class="site">
-  <h1><a href="../index.html">人话术语</a></h1>
-  <p>一个词，四种讲法，一群不同背景的人各自说一遍</p>
+  <span class="logo">话</span>
+  <div>
+    <h1><a href="../index.html">人话术语</a></h1>
+    <p class="tag">一个词，四种讲法，一群不同背景的人各自说一遍</p>
+  </div>
+  <nav><a href="../method.html">怎么用</a></nav>
 </header>
-<article class="term">
-  <header>
+<article class="post single" id="calculus">
+  <a class="avatar calculus" href="../index.html">微</a>
+  <div class="body">
     <h1>微积分<span class="en">calculus</span></h1>
-    <div class="badges">
-      <span class="badge accurate">✅ 中文其实准，知道字的本义就懂</span>
-      <span class="chip">微积分</span>
+    <div class="tags">
+      <span class="tagchip">微积分</span>
+      <span class="tagchip">✅ 中文其实准，知道字的本义就懂</span>
       
     </div>
-  </header>
 
-  <section class="field plain">
-    <h2>人话</h2>
-    <p>研究「变化」和「累加」的数学。微分管「此刻变得多快」，积分管「一共累积了多少」，两者互为逆运算。</p>
-  </section>
+    <section class="field said">
+      <h2>造词现场</h2>
+      <p>要处理的问题是：一个量此刻变得多快，一共又积了多少。牛顿和莱布尼茨各自独立地把它算出来了。莱布尼茨用「差」的语言（dx、dy），牛顿用「流」的语言（流数）。后来通行的名字借了拉丁 calculus —— 小石子，古罗马人拿石子计数。所以这个词的字面只是「算的办法」。中文借了李善兰的两个字：微分 + 积分。</p>
+    </section>
 
-  <section class="field"><h2>英文释义</h2><p>calculus 就是「计算方法」，和 calculate 同根。今天英文里单说 calculus 默认指微积分。</p></section>
+    <section class="field plain">
+      <h2>人话</h2>
+      <p>研究「变化」和「累加」的数学。微分管「此刻变得多快」，积分管「一共累积了多少」，两者互为逆运算。</p>
+    </section>
+
+    <section class="field"><h2>英文释义</h2><p>calculus 就是「计算方法」，和 calculate 同根。今天英文里单说 calculus 默认指微积分。</p></section>
 <section class="field"><h2>英文来源</h2><p>拉丁 <em>calculus</em>「小石子」。古罗马人用石子计数，医学上 calculus 至今还指「结石」。</p></section>
 <section class="field"><h2>中文来源</h2><p>李善兰、伟烈亚力 1859《代微积拾级》，取微分 + 积分。</p></section>
 
-  <section class="comments">
-    <h2>评论区<span class="count"></span></h2>
-    <p class="empty">还没有评论。第一条留给你。</p>
-    <p class="empty">你的理解跟上面哪条不一样？<a href="https://github.com/Snoop2023/plain-terms/edit/main/.github/ISSUE_TEMPLATE/补一条理解.yml">在 GitHub 上补一条</a> —— 背景不同的人各说一遍，下一个人就懂了。</p>
-  </section>
+    <h2 class="block">评论区<span class="count"> · 0 条</span></h2>
+    <div id="comments"><p class="empty">还没有评论。第一条留给你。</p></div>
+    <p class="empty">你的讲法跟上面哪条不一样？写在下面，或者<a href="https://github.com/Snoop2023/plain-terms/issues/new">直接投一条</a>。</p>
 
-  <section class="field" style="margin-top:2rem">
-    <h2>动手改</h2>
-    <p style="font-size:.92rem;color:var(--muted)">
-      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/calculus/calculus.md">编辑这个词条</a> ·
-      <a href="../index.html#微积分">看看同一章里的其它词</a>
-    </p>
-  </section>
+    <section class="discuss">
+      <p class="hint">👇 这一节是在 GitHub Discussions 里跑的：登录一次，点赞（reaction）和留言都算数。票多的评论会被提进上面的正式评论区。</p>
+      <script src="https://giscus.app/client.js"
+        data-repo="Snoop2023/plain-terms"
+        data-repo-id="R_kgDOU_OcQw"
+        data-category="General"
+        data-category-id="DIC_kwDOU_OcQ84DHPDs"
+        data-mapping="specific"
+        data-term="calculus"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous" async></script>
+    </section>
+
+    <footer class="pf">
+      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/calculus/calculus.md">✏️ 编辑这个词条</a>
+      <a href="../index.html#calculus">🔗 回信息流</a>
+      <a href="https://github.com/Snoop2023/plain-terms/blob/main/terms/calculus/calculus.md">📄 看源文件</a>
+    </footer>
+  </div>
 </article>
 
 <footer class="site">
   <p>每一页都欢迎 PR：加词条、改定义、补一条你的理解。</p>
-  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，仅作短引用并注明出处；如有异议请开 Issue，我们会删改。</p>
+  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，只作短引用并注明出处；本人不想被收录，开个 Issue 我们就删。</p>
 </footer>
 </div>
 </body>

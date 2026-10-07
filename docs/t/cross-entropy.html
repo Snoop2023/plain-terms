@@ -10,46 +10,70 @@
 <body>
 <div class="wrap">
 <header class="site">
-  <h1><a href="../index.html">人话术语</a></h1>
-  <p>一个词，四种讲法，一群不同背景的人各自说一遍</p>
+  <span class="logo">话</span>
+  <div>
+    <h1><a href="../index.html">人话术语</a></h1>
+    <p class="tag">一个词，四种讲法，一群不同背景的人各自说一遍</p>
+  </div>
+  <nav><a href="../method.html">怎么用</a></nav>
 </header>
-<article class="term">
-  <header>
+<article class="post single" id="cross-entropy">
+  <a class="avatar probability" href="../index.html">交</a>
+  <div class="body">
     <h1>交叉熵<span class="en">cross-entropy</span></h1>
-    <div class="badges">
-      <span class="badge both_hard">🔁 两边都不直观，只能记住它指什么</span>
-      <span class="chip">概率与信息</span>
+    <div class="tags">
+      <span class="tagchip">概率与信息</span>
+      <span class="tagchip">🔁 两边都不直观，只能记住它指什么</span>
       
     </div>
-  </header>
 
-  <section class="field plain">
-    <h2>人话</h2>
-    <p>拿「模型猜的概率」去给「真实答案」打分。模型给真实答案的概率越高，交叉熵越低。GPT 训练时压低的那个 loss 就是它；只有一个正确答案时，它就等于「−log(正确答案的概率)」。</p>
-  </section>
+    <section class="field said">
+      <h2>造词现场</h2>
+      <p>要处理的问题是：模型猜出的概率分布，离真实答案有多远，怎么打分。信息论里已经有熵了，于是再借一次：拿一个分布去衡量另一个分布，两个交叉起来算。名字里的 cross 就是交叉。中文直译。</p>
+    </section>
 
-  <section class="field"><h2>英文释义</h2><p>cross「交叉」：用一个分布（模型的猜测）去衡量另一个分布（真实数据），两者交叉起来算。</p></section>
+    <section class="field plain">
+      <h2>人话</h2>
+      <p>拿「模型猜的概率」去给「真实答案」打分。模型给真实答案的概率越高，交叉熵越低。GPT 训练时压低的那个 loss 就是它；只有一个正确答案时，它就等于「−log(正确答案的概率)」。</p>
+    </section>
+
+    <section class="field"><h2>英文释义</h2><p>cross「交叉」：用一个分布（模型的猜测）去衡量另一个分布（真实数据），两者交叉起来算。</p></section>
 <section class="field"><h2>英文来源</h2><p>信息论，20 世纪中叶。</p></section>
 <section class="field"><h2>中文来源</h2><p>直译。</p></section>
 
-  <section class="comments">
-    <h2>评论区<span class="count"> · 3 条</span></h2>
-    <div class="comment"><div class="meta"><span class="who">炼丹师</span><span class="chip">AI 训练 / 工程</span><span class="src">编者视角</span></div><p class="text">面试时被问交叉熵，说「就是正确答案概率取负对数」，面试官点头。真的就这么简单。</p></div><div class="comment"><div class="meta"><span class="who">考生</span><span class="chip">学生</span><span class="src">编者视角</span></div><p class="text">像考试打分。正确答案你给了 90% 的把握，扣分很少；你只给了 1% 的把握，扣分巨多。0% 的把握？扣到无穷大。</p></div><div class="comment"><div class="meta"><span class="who">数学系路人</span><span class="chip">数学专业</span><span class="src">编者视角</span></div><p class="text">交叉熵 − 熵 = KL 散度，衡量「模型的猜测」离「真实分布」有多远。熵是数据本身的难度，压不下去；能压的只有 KL 那一部分。</p></div>
-    <p class="empty">你的理解跟上面哪条不一样？<a href="https://github.com/Snoop2023/plain-terms/edit/main/.github/ISSUE_TEMPLATE/补一条理解.yml">在 GitHub 上补一条</a> —— 背景不同的人各说一遍，下一个人就懂了。</p>
-  </section>
+    <h2 class="block">评论区<span class="count"> · 3 条</span></h2>
+    <div id="comments"><div class="thread" id="c1"><div class="cm"><div class="meta"><span class="who">炼丹师</span><span class="tagchip">AI 训练 / 工程</span><span class="src">编者视角</span></div><p>面试时被问交叉熵，说「就是正确答案概率取负对数」，面试官点头。真的就这么简单。</p></div></div><div class="thread" id="c2"><div class="cm"><div class="meta"><span class="who">考生</span><span class="tagchip">学生</span><span class="src">编者视角</span></div><p>像考试打分。正确答案你给了 90% 的把握，扣分很少；你只给了 1% 的把握，扣分巨多。0% 的把握？扣到无穷大。</p></div></div><div class="thread" id="c3"><div class="cm"><div class="meta"><span class="who">数学系路人</span><span class="tagchip">数学专业</span><span class="src">编者视角</span></div><p>交叉熵 − 熵 = KL 散度，衡量「模型的猜测」离「真实分布」有多远。熵是数据本身的难度，压不下去；能压的只有 KL 那一部分。</p></div></div></div>
+    <p class="empty">你的讲法跟上面哪条不一样？写在下面，或者<a href="https://github.com/Snoop2023/plain-terms/issues/new">直接投一条</a>。</p>
 
-  <section class="field" style="margin-top:2rem">
-    <h2>动手改</h2>
-    <p style="font-size:.92rem;color:var(--muted)">
-      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/probability/cross-entropy.md">编辑这个词条</a> ·
-      <a href="../index.html#概率与信息">看看同一章里的其它词</a>
-    </p>
-  </section>
+    <section class="discuss">
+      <p class="hint">👇 这一节是在 GitHub Discussions 里跑的：登录一次，点赞（reaction）和留言都算数。票多的评论会被提进上面的正式评论区。</p>
+      <script src="https://giscus.app/client.js"
+        data-repo="Snoop2023/plain-terms"
+        data-repo-id="R_kgDOU_OcQw"
+        data-category="General"
+        data-category-id="DIC_kwDOU_OcQ84DHPDs"
+        data-mapping="specific"
+        data-term="cross-entropy"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous" async></script>
+    </section>
+
+    <footer class="pf">
+      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/probability/cross-entropy.md">✏️ 编辑这个词条</a>
+      <a href="../index.html#cross-entropy">🔗 回信息流</a>
+      <a href="https://github.com/Snoop2023/plain-terms/blob/main/terms/probability/cross-entropy.md">📄 看源文件</a>
+    </footer>
+  </div>
 </article>
 
 <footer class="site">
   <p>每一页都欢迎 PR：加词条、改定义、补一条你的理解。</p>
-  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，仅作短引用并注明出处；如有异议请开 Issue，我们会删改。</p>
+  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，只作短引用并注明出处；本人不想被收录，开个 Issue 我们就删。</p>
 </footer>
 </div>
 </body>

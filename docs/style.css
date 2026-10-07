@@ -1,27 +1,27 @@
 /* 人话术语 —— 站点样式。改这一个文件就能换肤。 */
 
 :root {
-  --bg: #fbfaf7;
-  --fg: #1f1d1a;
-  --muted: #6b655c;
-  --line: #e3ded4;
-  --card: #ffffff;
-  --accent: #8a5a2b;
+  --bg: #f2f1ec;
+  --fg: #1b1a17;
+  --muted: #6f6a60;
+  --line: #e2ded3;
+  --card: #fffefb;
+  --link: #2563b0;
   --ok: #2f7d5c;
   --warn: #b0641d;
   --hard: #6b5bb5;
-  --radius: 10px;
-  --maxw: 46rem;
+  --radius: 14px;
+  --maxw: 780px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #17161a;
-    --fg: #e8e4dc;
-    --muted: #9a938a;
-    --line: #302e35;
-    --card: #1e1d22;
-    --accent: #d9a76c;
+    --bg: #16151a;
+    --fg: #e9e5dd;
+    --muted: #97918a;
+    --line: #2c2a31;
+    --card: #1d1c22;
+    --link: #7ba7e8;
     --ok: #6cc39a;
     --warn: #e0a35c;
     --hard: #a99ae8;
@@ -34,93 +34,172 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font: 16px/1.75 -apple-system, "SF Pro Text", "PingFang SC", "Hiragino Sans GB",
+  font: 15.5px/1.72 -apple-system, "SF Pro Text", "PingFang SC", "Hiragino Sans GB",
         "Microsoft YaHei", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  word-break: break-word;
 }
 
-a { color: var(--accent); text-decoration: none; }
+a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
-
-.wrap { max-width: var(--maxw); margin: 0 auto; padding: 2.5rem 1.25rem 6rem; }
-
-header.site { border-bottom: 1px solid var(--line); padding-bottom: 1.25rem; margin-bottom: 2rem; }
-header.site h1 { margin: 0 0 .35rem; font-size: 1.5rem; letter-spacing: .01em; }
-header.site h1 a { color: var(--fg); }
-header.site p { margin: 0; color: var(--muted); font-size: .9rem; }
-
-.lede { color: var(--muted); font-size: .95rem; }
-.lede strong { color: var(--fg); }
-
-.legend { display: flex; flex-wrap: wrap; gap: .5rem .9rem; margin: 1.25rem 0 2rem; font-size: .82rem; color: var(--muted); }
-.legend span b { font-weight: 600; }
-
-.searchbar { position: sticky; top: 0; z-index: 5; padding: .75rem 0; background: var(--bg); }
-.searchbar input {
-  width: 100%; padding: .65rem .85rem; font-size: .95rem;
-  background: var(--card); color: var(--fg);
-  border: 1px solid var(--line); border-radius: var(--radius);
-  font-family: inherit;
-}
-.searchbar input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
-
-h2.cat { font-size: .85rem; letter-spacing: .12em; text-transform: uppercase;
-         color: var(--muted); margin: 2.5rem 0 .9rem; font-weight: 600; }
-
-.cards { display: grid; gap: .75rem; }
-
-.card {
-  display: block; padding: .95rem 1.05rem; background: var(--card);
-  border: 1px solid var(--line); border-radius: var(--radius);
-}
-.card:hover { border-color: var(--accent); text-decoration: none; }
-.card .head { display: flex; align-items: baseline; gap: .55rem; flex-wrap: wrap; }
-.card .zh { font-size: 1.05rem; font-weight: 600; color: var(--fg); }
-.card .en { font-size: .85rem; color: var(--muted); font-style: italic; }
-.card .plain { margin: .4rem 0 0; font-size: .9rem; color: var(--muted); }
-.card .stats { margin-top: .5rem; font-size: .78rem; color: var(--muted); }
-
-.mark { font-size: .8em; }
-.badge { display: inline-block; padding: .1rem .5rem; border-radius: 999px;
-         font-size: .75rem; border: 1px solid currentColor; white-space: nowrap; }
-.badge.accurate { color: var(--ok); }
-.badge.misleading { color: var(--warn); }
-.badge.both_hard { color: var(--hard); }
-.chip { display: inline-block; padding: .1rem .5rem; border-radius: 999px;
-        font-size: .75rem; color: var(--muted); border: 1px solid var(--line); }
-
-article.term header { margin-bottom: 1.75rem; }
-article.term h1 { font-size: 1.7rem; margin: 0 0 .6rem; letter-spacing: .01em; }
-article.term h1 .en { font-size: 1rem; font-weight: 400; font-style: italic; color: var(--muted); margin-left: .5rem; }
-article.term .badges { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
-
-section.field { margin: 0 0 1.35rem; }
-section.field h2 { font-size: .82rem; letter-spacing: .1em; text-transform: uppercase;
-                   color: var(--muted); margin: 0 0 .4rem; font-weight: 600; }
-section.field p { margin: 0; }
-section.field.plain p { font-size: 1.06rem; }
-
-section.comments { margin-top: 2.5rem; border-top: 1px solid var(--line); padding-top: 1.5rem; }
-section.comments h2 { font-size: 1.05rem; margin: 0 0 1rem; }
-section.comments h2 .count { font-size: .8rem; color: var(--muted); font-weight: 400; margin-left: .4rem; }
-
-.comment { border-left: 2px solid var(--line); padding: 0 0 0 .9rem; margin: 0 0 1.1rem; }
-.comment .meta { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center;
-                 font-size: .8rem; color: var(--muted); margin-bottom: .25rem; }
-.comment .who { font-weight: 600; color: var(--fg); }
-.comment .text { margin: 0; }
-.comment .replies { margin-top: .8rem; }
-.comment .replies .comment { border-left-style: dotted; margin-bottom: .8rem; }
-.src.quoted { color: var(--ok); border-color: var(--ok); }
-
-.empty { color: var(--muted); font-size: .92rem; font-style: italic; }
-
-footer.site { border-top: 1px solid var(--line); margin-top: 3.5rem; padding-top: 1.25rem;
-              font-size: .85rem; color: var(--muted); }
-footer.site p { margin: .3rem 0; }
-
-.patterns { margin-top: 3rem; border-top: 1px solid var(--line); padding-top: 1.5rem; }
-.patterns h2 { font-size: 1.05rem; }
-.patterns li { margin-bottom: .5rem; }
-
 code { background: var(--line); padding: .1em .35em; border-radius: 4px; font-size: .88em; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 1.25rem .9rem 5rem; }
+
+/* ---------- 顶栏 ---------- */
+
+header.site {
+  display: flex; align-items: center; gap: .75rem;
+  padding: .6rem .3rem 1rem;
+}
+header.site .logo {
+  width: 34px; height: 34px; border-radius: 50%; flex: none;
+  background: var(--fg); color: var(--bg);
+  display: grid; place-items: center; font-weight: 700; font-size: .95rem;
+}
+header.site h1 { font-size: 1.02rem; margin: 0; font-weight: 700; }
+header.site h1 a { color: var(--fg); }
+header.site .tag { font-size: .78rem; color: var(--muted); margin: 0; }
+header.site nav { margin-left: auto; font-size: .82rem; }
+
+/* ---------- 搜索与筛选 ---------- */
+
+.controls { position: sticky; top: 0; z-index: 9; background: var(--bg); padding: .4rem 0 .7rem; }
+.controls input {
+  width: 100%; padding: .62rem .85rem; font-size: .92rem; font-family: inherit;
+  background: var(--card); color: var(--fg);
+  border: 1px solid var(--line); border-radius: 999px;
+}
+.controls input:focus { outline: 2px solid var(--link); outline-offset: -1px; }
+.chips { display: flex; gap: .4rem; overflow-x: auto; padding: .6rem .1rem 0; scrollbar-width: none; }
+.chips::-webkit-scrollbar { display: none; }
+.chipbtn {
+  flex: none; padding: .25rem .7rem; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--card); color: var(--muted);
+  font: inherit; font-size: .8rem; white-space: nowrap;
+}
+.chipbtn.on { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+
+/* ---------- 一条推 ---------- */
+
+.post {
+  display: flex; gap: .7rem; padding: .95rem 1rem;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--radius); margin-bottom: .6rem;
+  scroll-margin-top: 5rem;
+}
+.post:hover { border-color: #cfc9bb; }
+@media (prefers-color-scheme: dark) { .post:hover { border-color: #3d3a45; } }
+
+.avatar {
+  width: 42px; height: 42px; flex: none; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 1.05rem; font-weight: 600; color: #fff;
+}
+.a-math { background: #7a6bd6; }
+.a-calculus { background: #2f7d5c; }
+.a-linear-algebra { background: #b0641d; }
+.a-probability { background: #2b6ca3; }
+.a-ai { background: #b3455e; }
+.a-me { background: var(--fg); color: var(--bg); }
+
+.post .body { flex: 1; min-width: 0; }
+.ph { display: flex; align-items: baseline; gap: .45rem; flex-wrap: wrap; }
+.ph .name { font-weight: 700; color: var(--fg); font-size: 1.02rem; }
+.ph .handle { color: var(--muted); font-size: .85rem; font-style: italic; }
+.ph .cat { color: var(--muted); font-size: .78rem; border: 1px solid var(--line); border-radius: 999px; padding: .05rem .5rem; }
+.ph .mk { font-size: .82rem; margin-left: auto; }
+.ph .pin { font-size: .74rem; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: .05rem .5rem; }
+
+.hook { margin: .45rem 0 0; font-size: .98rem; }
+
+.origin {
+  margin-top: .6rem; padding: .55rem .7rem;
+  background: rgba(128, 128, 128, .09);
+  border-left: 3px solid var(--warn); border-radius: 0 8px 8px 0;
+  font-size: .88rem; color: var(--fg);
+}
+.origin .olabel { color: var(--warn); font-weight: 600; margin-right: .4rem; font-size: .8rem; }
+.origin.clip { color: var(--muted); }
+
+.replies { margin-top: .7rem; border-top: 1px dashed var(--line); padding-top: .6rem; }
+.reply { display: flex; gap: .5rem; margin-bottom: .55rem; }
+.reply:last-child { margin-bottom: 0; }
+.reply .rav {
+  width: 26px; height: 26px; flex: none; border-radius: 50%;
+  background: var(--line); color: var(--muted);
+  display: grid; place-items: center; font-size: .72rem; font-weight: 600;
+}
+.reply .rt { flex: 1; min-width: 0; }
+.reply .rm { font-size: .78rem; color: var(--muted); margin-bottom: .1rem; }
+.reply .rm b { color: var(--fg); font-weight: 600; }
+.reply .rm .quoted { color: var(--ok); }
+.reply p { margin: 0; font-size: .9rem; }
+
+.pf { display: flex; gap: 1.1rem; margin-top: .7rem; font-size: .82rem; color: var(--muted); flex-wrap: wrap; }
+.pf a { color: var(--muted); }
+.pf a:hover { color: var(--link); }
+
+/* ---------- 词条页 ---------- */
+
+article.single { padding: 1.1rem 1.1rem 1.3rem; }
+article.single h1 { font-size: 1.35rem; margin: .2rem 0 0; }
+article.single h1 .en { font-weight: 400; font-style: italic; color: var(--muted); font-size: .95rem; margin-left: .4rem; }
+section.field { margin: 1.1rem 0 0; }
+section.field h2 {
+  font-size: .74rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--muted); margin: 0 0 .35rem; font-weight: 600;
+}
+section.field p { margin: 0 0 .5rem; }
+section.field.plain p { font-size: 1.05rem; }
+section.field.said {
+  padding: .8rem .9rem; border-radius: 10px;
+  background: rgba(128, 128, 128, .09);
+  border-left: 3px solid var(--warn);
+}
+section.field.said h2 { color: var(--warn); }
+section.field.said p { font-size: .95rem; }
+
+.tags { display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .6rem; }
+.tagchip { font-size: .76rem; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: .08rem .55rem; }
+
+h2.block { font-size: 1rem; margin: 2rem 0 .9rem; }
+h2.block .count { font-size: .78rem; color: var(--muted); font-weight: 400; margin-left: .4rem; }
+
+.thread { border-left: 2px solid var(--line); padding-left: .85rem; margin-bottom: .9rem; }
+.thread .cm .meta { display: flex; gap: .45rem; flex-wrap: wrap; align-items: center; font-size: .8rem; color: var(--muted); margin-bottom: .15rem; }
+.thread .cm .who { font-weight: 600; color: var(--fg); }
+.thread .cm .src { font-size: .76rem; }
+.thread .cm .src.quoted { color: var(--ok); }
+.thread .cm p { margin: 0; }
+.thread .sub { border-left: 2px dotted var(--line); padding-left: .8rem; margin-top: .7rem; }
+
+.discuss { margin-top: 1.6rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+.discuss p.hint { font-size: .85rem; color: var(--muted); margin: 0 0 .8rem; }
+
+.empty { color: var(--muted); font-size: .88rem; font-style: italic; }
+
+.patterns { margin-top: 1.4rem; font-size: .92rem; }
+.patterns h2 { font-size: 1rem; }
+.patterns li { margin-bottom: .35rem; }
+
+/* ---------- 方法论页 ---------- */
+
+article.md { padding: 1.2rem 1.2rem 1.5rem; background: var(--card);
+             border: 1px solid var(--line); border-radius: var(--radius); }
+article.md h1 { font-size: 1.3rem; margin-top: 0; }
+article.md h2 { font-size: 1.02rem; margin: 1.7rem 0 .5rem; }
+article.md blockquote {
+  margin: .8rem 0; padding: .7rem .9rem; border-left: 3px solid var(--link);
+  background: rgba(128, 128, 128, .09); border-radius: 0 8px 8px 0;
+  color: var(--fg); font-size: .94rem;
+}
+article.md blockquote p { margin: 0 0 .5rem; }
+article.md blockquote p:last-child { margin: 0; }
+article.md table { border-collapse: collapse; width: 100%; font-size: .88rem; margin: .7rem 0; }
+article.md th, article.md td { border: 1px solid var(--line); padding: .35rem .55rem; text-align: left; }
+article.md th { background: rgba(128, 128, 128, .09); font-weight: 600; }
+article.md ul { padding-left: 1.1rem; }
+
+footer.site { padding: 1.4rem .3rem 0; font-size: .8rem; color: var(--muted); }
+footer.site p { margin: .25rem 0; }

@@ -10,46 +10,70 @@
 <body>
 <div class="wrap">
 <header class="site">
-  <h1><a href="../index.html">人话术语</a></h1>
-  <p>一个词，四种讲法，一群不同背景的人各自说一遍</p>
+  <span class="logo">话</span>
+  <div>
+    <h1><a href="../index.html">人话术语</a></h1>
+    <p class="tag">一个词，四种讲法，一群不同背景的人各自说一遍</p>
+  </div>
+  <nav><a href="../method.html">怎么用</a></nav>
 </header>
-<article class="term">
-  <header>
+<article class="post single" id="variance">
+  <a class="avatar probability" href="../index.html">方</a>
+  <div class="body">
     <h1>方差<span class="en">variance</span></h1>
-    <div class="badges">
-      <span class="badge accurate">✅ 中文其实准，知道字的本义就懂</span>
-      <span class="chip">概率与信息</span>
+    <div class="tags">
+      <span class="tagchip">概率与信息</span>
+      <span class="tagchip">✅ 中文其实准，知道字的本义就懂</span>
       
     </div>
-  </header>
 
-  <section class="field plain">
-    <h2>人话</h2>
-    <p>衡量一组数「抖得多厉害」。每个数减去平均值、平方、再取平均。方差大 = 很分散，方差小 = 很集中。开根号就是标准差。</p>
-  </section>
+    <section class="field said">
+      <h2>造词现场</h2>
+      <p>要处理的问题是：两组数平均值一样，一组很稳、一组忽上忽下，「抖」这件事怎么量。办法是每个数减平均值、平方、再取平均。名字借 vary「变化」。中文这两个字要小心：方是平方，差是偏差 —— 跟方程的「方」（方阵）来历无关。</p>
+    </section>
 
-  <section class="field"><h2>英文释义</h2><p>vary「变化」→ variance「变动的程度」。</p></section>
+    <section class="field plain">
+      <h2>人话</h2>
+      <p>衡量一组数「抖得多厉害」。每个数减去平均值、平方、再取平均。方差大 = 很分散，方差小 = 很集中。开根号就是标准差。</p>
+    </section>
+
+    <section class="field"><h2>英文释义</h2><p>vary「变化」→ variance「变动的程度」。</p></section>
 <section class="field"><h2>英文来源</h2><p>拉丁 <em>variare</em>「改变」。费希尔 1918 年定为统计术语。</p></section>
 <section class="field"><h2>中文来源</h2><p>方 = <strong>平方</strong>，差 = 偏差。注意：这个「方」和方程的「方」（方阵）来源完全不同。</p></section>
 
-  <section class="comments">
-    <h2>评论区<span class="count"></span></h2>
-    <p class="empty">还没有评论。第一条留给你。</p>
-    <p class="empty">你的理解跟上面哪条不一样？<a href="https://github.com/Snoop2023/plain-terms/edit/main/.github/ISSUE_TEMPLATE/补一条理解.yml">在 GitHub 上补一条</a> —— 背景不同的人各说一遍，下一个人就懂了。</p>
-  </section>
+    <h2 class="block">评论区<span class="count"> · 0 条</span></h2>
+    <div id="comments"><p class="empty">还没有评论。第一条留给你。</p></div>
+    <p class="empty">你的讲法跟上面哪条不一样？写在下面，或者<a href="https://github.com/Snoop2023/plain-terms/issues/new">直接投一条</a>。</p>
 
-  <section class="field" style="margin-top:2rem">
-    <h2>动手改</h2>
-    <p style="font-size:.92rem;color:var(--muted)">
-      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/probability/variance.md">编辑这个词条</a> ·
-      <a href="../index.html#概率与信息">看看同一章里的其它词</a>
-    </p>
-  </section>
+    <section class="discuss">
+      <p class="hint">👇 这一节是在 GitHub Discussions 里跑的：登录一次，点赞（reaction）和留言都算数。票多的评论会被提进上面的正式评论区。</p>
+      <script src="https://giscus.app/client.js"
+        data-repo="Snoop2023/plain-terms"
+        data-repo-id="R_kgDOU_OcQw"
+        data-category="General"
+        data-category-id="DIC_kwDOU_OcQ84DHPDs"
+        data-mapping="specific"
+        data-term="variance"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous" async></script>
+    </section>
+
+    <footer class="pf">
+      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/probability/variance.md">✏️ 编辑这个词条</a>
+      <a href="../index.html#variance">🔗 回信息流</a>
+      <a href="https://github.com/Snoop2023/plain-terms/blob/main/terms/probability/variance.md">📄 看源文件</a>
+    </footer>
+  </div>
 </article>
 
 <footer class="site">
   <p>每一页都欢迎 PR：加词条、改定义、补一条你的理解。</p>
-  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，仅作短引用并注明出处；如有异议请开 Issue，我们会删改。</p>
+  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，只作短引用并注明出处；本人不想被收录，开个 Issue 我们就删。</p>
 </footer>
 </div>
 </body>

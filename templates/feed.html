@@ -1,0 +1,48 @@
+<div class="controls">
+  <input id="q" type="search" placeholder="搜词、搜正文、搜评论里的话……" autocomplete="off">
+  <div class="chips">
+    <button class="chipbtn on" data-cat="all">全部 {{total}}</button>
+    {{chips}}
+  </div>
+</div>
+
+<div id="feed">
+{{pinned}}
+{{items}}
+</div>
+
+<p class="empty" id="noresult" hidden>没搜到。要不要<a href="{{new_term_url}}">新加一个词条</a>？</p>
+
+{{patterns}}
+
+<script>
+(function () {
+  var q = document.getElementById('q');
+  var posts = [].slice.call(document.querySelectorAll('.post'));
+  var empty = document.getElementById('noresult');
+  var cat = 'all';
+  var btns = [].slice.call(document.querySelectorAll('.chipbtn'));
+
+  function apply() {
+    var v = q.value.trim().toLowerCase();
+    var hits = 0;
+    posts.forEach(function (p) {
+      if (p.dataset.cat === 'pinned') { p.hidden = !!(v || cat !== 'all'); return; }
+      var ok = (cat === 'all' || p.dataset.cat === cat)
+            && (!v || (p.dataset.search || '').indexOf(v) !== -1);
+      p.hidden = !ok;
+      if (ok) hits++;
+    });
+    empty.hidden = hits !== 0;
+  }
+
+  q.addEventListener('input', apply);
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      cat = b.dataset.cat;
+      btns.forEach(function (x) { x.classList.toggle('on', x === b); });
+      apply();
+    });
+  });
+})();
+</script>

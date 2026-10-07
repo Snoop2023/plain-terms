@@ -10,46 +10,70 @@
 <body>
 <div class="wrap">
 <header class="site">
-  <h1><a href="../index.html">人话术语</a></h1>
-  <p>一个词，四种讲法，一群不同背景的人各自说一遍</p>
+  <span class="logo">话</span>
+  <div>
+    <h1><a href="../index.html">人话术语</a></h1>
+    <p class="tag">一个词，四种讲法，一群不同背景的人各自说一遍</p>
+  </div>
+  <nav><a href="../method.html">怎么用</a></nav>
 </header>
-<article class="term">
-  <header>
+<article class="post single" id="stochastic">
+  <a class="avatar probability" href="../index.html">随</a>
+  <div class="body">
     <h1>随机<span class="en">stochastic</span></h1>
-    <div class="badges">
-      <span class="badge accurate">✅ 中文其实准，知道字的本义就懂</span>
-      <span class="chip">概率与信息</span>
+    <div class="tags">
+      <span class="tagchip">概率与信息</span>
+      <span class="tagchip">✅ 中文其实准，知道字的本义就懂</span>
       
     </div>
-  </header>
 
-  <section class="field plain">
-    <h2>人话</h2>
-    <p>带不确定性、每次结果可能不同。「随机梯度下降」= 每次不用全部数据，只抽一小批来估算下坡方向，快，但方向有噪声。</p>
-  </section>
+    <section class="field said">
+      <h2>造词现场</h2>
+      <p>要处理的问题是：结果不确定、每次都可能不一样，这个过程怎么称呼。希腊人借了 stokhazesthai「瞄准、猜测」，stokhos 是靶子 —— 射箭瞄得准不准得看运气。学术文章爱用这个古雅的说法，日常英语直接说 random。中文借「随」（任凭）+「机」（机会）。</p>
+    </section>
 
-  <section class="field"><h2>英文释义</h2><p>stochastic 是个学术词，日常一般说 random。原义是「善于猜测的」。</p></section>
+    <section class="field plain">
+      <h2>人话</h2>
+      <p>带不确定性、每次结果可能不同。「随机梯度下降」= 每次不用全部数据，只抽一小批来估算下坡方向，快，但方向有噪声。</p>
+    </section>
+
+    <section class="field"><h2>英文释义</h2><p>stochastic 是个学术词，日常一般说 random。原义是「善于猜测的」。</p></section>
 <section class="field"><h2>英文来源</h2><p>希腊 <em>stokhazesthai</em>「瞄准、猜测」，<em>stokhos</em> 是「靶子」。</p></section>
 <section class="field"><h2>中文来源</h2><p>随 = 任凭，机 = 机会，直白。</p></section>
 
-  <section class="comments">
-    <h2>评论区<span class="count"></span></h2>
-    <p class="empty">还没有评论。第一条留给你。</p>
-    <p class="empty">你的理解跟上面哪条不一样？<a href="https://github.com/Snoop2023/plain-terms/edit/main/.github/ISSUE_TEMPLATE/补一条理解.yml">在 GitHub 上补一条</a> —— 背景不同的人各说一遍，下一个人就懂了。</p>
-  </section>
+    <h2 class="block">评论区<span class="count"> · 0 条</span></h2>
+    <div id="comments"><p class="empty">还没有评论。第一条留给你。</p></div>
+    <p class="empty">你的讲法跟上面哪条不一样？写在下面，或者<a href="https://github.com/Snoop2023/plain-terms/issues/new">直接投一条</a>。</p>
 
-  <section class="field" style="margin-top:2rem">
-    <h2>动手改</h2>
-    <p style="font-size:.92rem;color:var(--muted)">
-      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/probability/stochastic.md">编辑这个词条</a> ·
-      <a href="../index.html#概率与信息">看看同一章里的其它词</a>
-    </p>
-  </section>
+    <section class="discuss">
+      <p class="hint">👇 这一节是在 GitHub Discussions 里跑的：登录一次，点赞（reaction）和留言都算数。票多的评论会被提进上面的正式评论区。</p>
+      <script src="https://giscus.app/client.js"
+        data-repo="Snoop2023/plain-terms"
+        data-repo-id="R_kgDOU_OcQw"
+        data-category="General"
+        data-category-id="DIC_kwDOU_OcQ84DHPDs"
+        data-mapping="specific"
+        data-term="stochastic"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous" async></script>
+    </section>
+
+    <footer class="pf">
+      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/probability/stochastic.md">✏️ 编辑这个词条</a>
+      <a href="../index.html#stochastic">🔗 回信息流</a>
+      <a href="https://github.com/Snoop2023/plain-terms/blob/main/terms/probability/stochastic.md">📄 看源文件</a>
+    </footer>
+  </div>
 </article>
 
 <footer class="site">
   <p>每一页都欢迎 PR：加词条、改定义、补一条你的理解。</p>
-  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，仅作短引用并注明出处；如有异议请开 Issue，我们会删改。</p>
+  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，只作短引用并注明出处；本人不想被收录，开个 Issue 我们就删。</p>
 </footer>
 </div>
 </body>

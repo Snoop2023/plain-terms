@@ -10,46 +10,70 @@
 <body>
 <div class="wrap">
 <header class="site">
-  <h1><a href="../index.html">人话术语</a></h1>
-  <p>一个词，四种讲法，一群不同背景的人各自说一遍</p>
+  <span class="logo">话</span>
+  <div>
+    <h1><a href="../index.html">人话术语</a></h1>
+    <p class="tag">一个词，四种讲法，一群不同背景的人各自说一遍</p>
+  </div>
+  <nav><a href="../method.html">怎么用</a></nav>
 </header>
-<article class="term">
-  <header>
+<article class="post single" id="gradient">
+  <a class="avatar calculus" href="../index.html">梯</a>
+  <div class="body">
     <h1>梯度<span class="en">gradient</span></h1>
-    <div class="badges">
-      <span class="badge accurate">✅ 中文其实准，知道字的本义就懂</span>
-      <span class="chip">微积分</span>
+    <div class="tags">
+      <span class="tagchip">微积分</span>
+      <span class="tagchip">✅ 中文其实准，知道字的本义就懂</span>
       
     </div>
-  </header>
 
-  <section class="field plain">
-    <h2>人话</h2>
-    <p>多个输入时，每个输入各有一个导数，把它们排成一个向量就是梯度。它指向「函数涨得最快」的方向；反着走就是下坡最快，这就是梯度下降。</p>
-  </section>
+    <section class="field said">
+      <h2>造词现场</h2>
+      <p>要处理的问题是：输入有几百个，每个都在影响结果，该往哪个方向调。把每个输入的导数排成一排，就得到一支箭头 —— 它指向上升最快的方向。名字借了 grade —— 坡度。中文借「梯」+「度」：像梯子一样一级一级的陡度。</p>
+    </section>
 
-  <section class="field"><h2>英文释义</h2><p>grade「坡度、等级」（公路的坡度也叫 grade），gradient = 坡度有多陡、朝哪边。</p></section>
+    <section class="field plain">
+      <h2>人话</h2>
+      <p>多个输入时，每个输入各有一个导数，把它们排成一个向量就是梯度。它指向「函数涨得最快」的方向；反着走就是下坡最快，这就是梯度下降。</p>
+    </section>
+
+    <section class="field"><h2>英文释义</h2><p>grade「坡度、等级」（公路的坡度也叫 grade），gradient = 坡度有多陡、朝哪边。</p></section>
 <section class="field"><h2>英文来源</h2><p>拉丁 <em>gradus</em>「台阶、一步」，和 graduate（毕业＝上一级台阶）、degree 同根。</p></section>
 <section class="field"><h2>中文来源</h2><p>梯 = 梯子，度 = 程度，直译。</p></section>
 
-  <section class="comments">
-    <h2>评论区<span class="count"> · 3 条</span></h2>
-    <div class="comment"><div class="meta"><span class="who">登山爱好者</span><span class="chip">户外 / 非本专业读者</span><span class="src">编者视角</span></div><p class="text">蒙着眼站在山坡上，用脚探一圈，找出哪个方向最陡。梯度就是这个「最陡的上坡方向」。梯度下降就是朝反方向迈一步，再探，再迈。</p></div><div class="comment"><div class="meta"><span class="who">炼丹师</span><span class="chip">AI 训练 / 工程</span><span class="src">编者视角</span></div><p class="text">一个参数的叫导数，一百万个参数的导数排成一排，就叫梯度。没有更神秘的东西了。</p></div><div class="comment"><div class="meta"><span class="who">数学系路人</span><span class="chip">数学专业</span><span class="src">编者视角</span></div><p class="text">补一句：梯度下降只保证每一步都在下坡，不保证走到全世界最低的那个坑。好在高维空间里，更常见的是「马鞍面」而不是死坑，多走几步通常能绕出来。</p></div>
-    <p class="empty">你的理解跟上面哪条不一样？<a href="https://github.com/Snoop2023/plain-terms/edit/main/.github/ISSUE_TEMPLATE/补一条理解.yml">在 GitHub 上补一条</a> —— 背景不同的人各说一遍，下一个人就懂了。</p>
-  </section>
+    <h2 class="block">评论区<span class="count"> · 3 条</span></h2>
+    <div id="comments"><div class="thread" id="c1"><div class="cm"><div class="meta"><span class="who">登山爱好者</span><span class="tagchip">户外 / 非本专业读者</span><span class="src">编者视角</span></div><p>蒙着眼站在山坡上，用脚探一圈，找出哪个方向最陡。梯度就是这个「最陡的上坡方向」。梯度下降就是朝反方向迈一步，再探，再迈。</p></div></div><div class="thread" id="c2"><div class="cm"><div class="meta"><span class="who">炼丹师</span><span class="tagchip">AI 训练 / 工程</span><span class="src">编者视角</span></div><p>一个参数的叫导数，一百万个参数的导数排成一排，就叫梯度。没有更神秘的东西了。</p></div></div><div class="thread" id="c3"><div class="cm"><div class="meta"><span class="who">数学系路人</span><span class="tagchip">数学专业</span><span class="src">编者视角</span></div><p>补一句：梯度下降只保证每一步都在下坡，不保证走到全世界最低的那个坑。好在高维空间里，更常见的是「马鞍面」而不是死坑，多走几步通常能绕出来。</p></div></div></div>
+    <p class="empty">你的讲法跟上面哪条不一样？写在下面，或者<a href="https://github.com/Snoop2023/plain-terms/issues/new">直接投一条</a>。</p>
 
-  <section class="field" style="margin-top:2rem">
-    <h2>动手改</h2>
-    <p style="font-size:.92rem;color:var(--muted)">
-      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/calculus/gradient.md">编辑这个词条</a> ·
-      <a href="../index.html#微积分">看看同一章里的其它词</a>
-    </p>
-  </section>
+    <section class="discuss">
+      <p class="hint">👇 这一节是在 GitHub Discussions 里跑的：登录一次，点赞（reaction）和留言都算数。票多的评论会被提进上面的正式评论区。</p>
+      <script src="https://giscus.app/client.js"
+        data-repo="Snoop2023/plain-terms"
+        data-repo-id="R_kgDOU_OcQw"
+        data-category="General"
+        data-category-id="DIC_kwDOU_OcQ84DHPDs"
+        data-mapping="specific"
+        data-term="gradient"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous" async></script>
+    </section>
+
+    <footer class="pf">
+      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/calculus/gradient.md">✏️ 编辑这个词条</a>
+      <a href="../index.html#gradient">🔗 回信息流</a>
+      <a href="https://github.com/Snoop2023/plain-terms/blob/main/terms/calculus/gradient.md">📄 看源文件</a>
+    </footer>
+  </div>
 </article>
 
 <footer class="site">
   <p>每一页都欢迎 PR：加词条、改定义、补一条你的理解。</p>
-  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，仅作短引用并注明出处；如有异议请开 Issue，我们会删改。</p>
+  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，只作短引用并注明出处；本人不想被收录，开个 Issue 我们就删。</p>
 </footer>
 </div>
 </body>

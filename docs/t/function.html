@@ -10,46 +10,70 @@
 <body>
 <div class="wrap">
 <header class="site">
-  <h1><a href="../index.html">人话术语</a></h1>
-  <p>一个词，四种讲法，一群不同背景的人各自说一遍</p>
+  <span class="logo">话</span>
+  <div>
+    <h1><a href="../index.html">人话术语</a></h1>
+    <p class="tag">一个词，四种讲法，一群不同背景的人各自说一遍</p>
+  </div>
+  <nav><a href="../method.html">怎么用</a></nav>
 </header>
-<article class="term">
-  <header>
+<article class="post single" id="function">
+  <a class="avatar math" href="../index.html">函</a>
+  <div class="body">
     <h1>函数<span class="en">function</span></h1>
-    <div class="badges">
-      <span class="badge accurate">✅ 中文其实准，知道字的本义就懂</span>
-      <span class="chip">基础数学</span>
+    <div class="tags">
+      <span class="tagchip">基础数学</span>
+      <span class="tagchip">✅ 中文其实准，知道字的本义就懂</span>
       
     </div>
-  </header>
 
-  <section class="field plain">
-    <h2>人话</h2>
-    <p>一台「输入→输出」的机器。给它一个 x，它按固定规则给出一个 y；同一个 x 永远得到同一个 y。x 一变，y 跟着变。</p>
-  </section>
+    <section class="field said">
+      <h2>造词现场</h2>
+      <p>要处理的问题是：一个量变了，另一个量跟着变，这层关系该怎么称呼。莱布尼茨描述曲线上一点在走动，欧拉把它写成 f(x)。名字借了拉丁 functio —— 履行、执行一份职责：一个输入进来，输出按规矩执行出来。中文这边，李善兰 1859 年另借了一个字：「函」是装信的套子、含着的盒子，函数就是含有另一个变量的数。</p>
+    </section>
 
-  <section class="field"><h2>英文释义</h2><p>function 日常就是「功能、作用」。「y is a function of x」= y 由 x 的作用决定。</p></section>
+    <section class="field plain">
+      <h2>人话</h2>
+      <p>一台「输入→输出」的机器。给它一个 x，它按固定规则给出一个 y；同一个 x 永远得到同一个 y。x 一变，y 跟着变。</p>
+    </section>
+
+    <section class="field"><h2>英文释义</h2><p>function 日常就是「功能、作用」。「y is a function of x」= y 由 x 的作用决定。</p></section>
 <section class="field"><h2>英文来源</h2><p>拉丁 <em>functio</em>「执行、履行」。莱布尼茨 17 世纪末首用于数学。</p></section>
 <section class="field"><h2>中文来源</h2><p>李善兰 1859《代数学》：「凡此变数中<strong>函</strong>彼变数者，则此为彼之函数。」函 = 包含（信函 = 装信的套子）。函数 = 里面含着另一个变量的数。</p></section>
 
-  <section class="comments">
-    <h2>评论区<span class="count"> · 3 条</span></h2>
-    <div class="comment"><div class="meta"><span class="who">吐槽役</span><span class="chip">非本专业读者</span><span class="src">编者视角</span></div><p class="text">「函数」两个字我念了十二年，才知道「函」是包含的意思。课本第一页就该把李善兰这句话印上去。</p></div><div class="comment"><div class="meta"><span class="who">C 语言老兵</span><span class="chip">底层软件 / C</span><span class="src">编者视角</span></div><p class="text">写过 C 的秒懂：<code>int f(int x) { return 2*x + 1; }</code>。数学里的函数，就是没有副作用、同样输入永远同样输出的 C 函数。</p></div><div class="comment"><div class="meta"><span class="who">数学系路人</span><span class="chip">数学专业</span><span class="src">编者视角</span></div><p class="text">别把函数等同于公式。函数本质是一张对照表：每个 x 对应唯一一个 y。公式只是把这张表压缩写出来的一种方式。</p></div>
-    <p class="empty">你的理解跟上面哪条不一样？<a href="https://github.com/Snoop2023/plain-terms/edit/main/.github/ISSUE_TEMPLATE/补一条理解.yml">在 GitHub 上补一条</a> —— 背景不同的人各说一遍，下一个人就懂了。</p>
-  </section>
+    <h2 class="block">评论区<span class="count"> · 3 条</span></h2>
+    <div id="comments"><div class="thread" id="c1"><div class="cm"><div class="meta"><span class="who">吐槽役</span><span class="tagchip">非本专业读者</span><span class="src">编者视角</span></div><p>「函数」两个字我念了十二年，才知道「函」是包含的意思。课本第一页就该把李善兰这句话印上去。</p></div></div><div class="thread" id="c2"><div class="cm"><div class="meta"><span class="who">C 语言老兵</span><span class="tagchip">底层软件 / C</span><span class="src">编者视角</span></div><p>写过 C 的秒懂：<code>int f(int x) { return 2*x + 1; }</code>。数学里的函数，就是没有副作用、同样输入永远同样输出的 C 函数。</p></div></div><div class="thread" id="c3"><div class="cm"><div class="meta"><span class="who">数学系路人</span><span class="tagchip">数学专业</span><span class="src">编者视角</span></div><p>别把函数等同于公式。函数本质是一张对照表：每个 x 对应唯一一个 y。公式只是把这张表压缩写出来的一种方式。</p></div></div></div>
+    <p class="empty">你的讲法跟上面哪条不一样？写在下面，或者<a href="https://github.com/Snoop2023/plain-terms/issues/new">直接投一条</a>。</p>
 
-  <section class="field" style="margin-top:2rem">
-    <h2>动手改</h2>
-    <p style="font-size:.92rem;color:var(--muted)">
-      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/math/function.md">编辑这个词条</a> ·
-      <a href="../index.html#基础数学">看看同一章里的其它词</a>
-    </p>
-  </section>
+    <section class="discuss">
+      <p class="hint">👇 这一节是在 GitHub Discussions 里跑的：登录一次，点赞（reaction）和留言都算数。票多的评论会被提进上面的正式评论区。</p>
+      <script src="https://giscus.app/client.js"
+        data-repo="Snoop2023/plain-terms"
+        data-repo-id="R_kgDOU_OcQw"
+        data-category="General"
+        data-category-id="DIC_kwDOU_OcQ84DHPDs"
+        data-mapping="specific"
+        data-term="function"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous" async></script>
+    </section>
+
+    <footer class="pf">
+      <a href="https://github.com/Snoop2023/plain-terms/edit/main/terms/math/function.md">✏️ 编辑这个词条</a>
+      <a href="../index.html#function">🔗 回信息流</a>
+      <a href="https://github.com/Snoop2023/plain-terms/blob/main/terms/math/function.md">📄 看源文件</a>
+    </footer>
+  </div>
 </article>
 
 <footer class="site">
   <p>每一页都欢迎 PR：加词条、改定义、补一条你的理解。</p>
-  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，仅作短引用并注明出处；如有异议请开 Issue，我们会删改。</p>
+  <p>内容 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>，代码 MIT。收录的他人原话版权归原作者，只作短引用并注明出处；本人不想被收录，开个 Issue 我们就删。</p>
 </footer>
 </div>
 </body>
