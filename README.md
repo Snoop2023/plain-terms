@@ -86,4 +86,5 @@ open _site/index.html        # 或者 python3 -m http.server -d _site 8000
 
 ## 姊妹项目
 
-- [会说话的定律](https://github.com/Snoop2023/descriptive-naming)：给人名定律取描述式新名，一眼听懂内容。
+- **会说话的定律**（descriptive-naming）：给人名定律取描述式新名，一眼听懂内容。同一套想法用在「命名」上。
+  仓库还没公开，等这份稳定了一起放出来。
