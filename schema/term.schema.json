@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "术语评论区 —— 词条格式",
+  "title": "人话术语 —— 词条格式",
   "type": "object",
   "required": ["id", "term_zh", "term_en", "category", "verdict"],
   "properties": {

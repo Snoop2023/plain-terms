@@ -1,6 +1,6 @@
 # 站点与仓库配置。改这一个文件就能改站名、仓库地址、投稿入口。
 site:
-  title: 术语评论区
+  title: 人话术语
   tagline: 一个词，四种讲法，一群不同背景的人各自说一遍
   description: 数学与 AI 术语的定义、词源，以及评论区里不同背景的人各自的讲法。
   intro: >
@@ -12,7 +12,7 @@ site:
 
 # 仓库地址（建好后把 USER/REPO 换成真实值，站点里的编辑链接会自动跟上）
 repo:
-  url: "https://github.com/Snoop2023/term-comments"
+  url: "https://github.com/Snoop2023/plain-terms"
   branch: main
   terms_dir: terms
   new_term_path: ".github/ISSUE_TEMPLATE/新词条.yml"
